@@ -1,0 +1,24 @@
+ul{
+    font-size: 20px;
+}
+.navbar-brand{
+    font-size: 20px;
+}
+.logo{
+    height: 200px;
+    width: 200px;
+    border-radius: 100px;
+    margin-left: 600px;
+    margin-top: -80px;
+}
+.hapsiraRrethLogos{
+    background-color: gray;
+    height: 200px;
+}
+
+.slogan{
+    margin-left: 900px;
+    font-size: 50px;
+    font-family: ;
+    text-align: center;
+}
