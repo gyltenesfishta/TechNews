@@ -1,8 +1,6 @@
 body{
     background-color:cadetblue;
 }
-
-
 ul{
     font-size: 20px;
 }
@@ -10,14 +8,7 @@ ul{
     font-size: 20px;
 }
 .logo{
-    height: 100px;
-    width: 100px;
-    border-radius: 50px;
-    margin-left: 600px;
-    margin-top: -80px;
-}
-.hapsiraRrethLogos{
-    background-color: gray;
-    height: 200px;
+    height: 50%;
+    width: 50%;
 }
 
