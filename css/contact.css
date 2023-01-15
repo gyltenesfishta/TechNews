@@ -42,14 +42,14 @@ p{
     color: white;
     margin-top: 3%;
 }
-.butoniPerMesazhLeo{
+#butoniPerMesazhLeo{
     position: absolute;
     text-align: center;
     margin-left: 14.5%;
     margin-top: -1%;
 
 }
-.butoni-thirrjeLeo{
+#butoni-thirrjeLeo{
     position: absolute;
     margin-top: 3.5%;
     margin-left: 14.5%;
@@ -83,12 +83,12 @@ h1{
     margin-left: 14.5%;
     margin-top: 0%;
 }
-.butoniPerMesazhOlti{
+#butoniPerMesazhOlti{
     position: absolute;
     margin-left: 14.5%;
     margin-top: 1.5%;
 }
-.butoni-thirrjeOlti{
+#butoni-thirrjeOlti{
     position: absolute;
     margin-left: 14.5%;
     margin-top: -1%;
