@@ -1,14 +1,12 @@
-body{
-    background-color:cadetblue;
-}
-ul{
-    font-size: 20px;
+.nav-item{
+    font-size: 25px;
 }
 .navbar-brand{
-    font-size: 20px;
+    font-size: 25px;
 }
-.logo{
-    height: 50%;
-    width: 50%;
+img{
+    height: 70px;
+    width: 200px;
+   
+    padding: 5px;
 }
-
