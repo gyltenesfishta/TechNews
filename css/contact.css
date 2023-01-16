@@ -13,7 +13,6 @@ p{
 .logo{
     height: 70px;
     width: 200px;
-   
     padding: 5px;
 }
 .leo{
@@ -24,6 +23,8 @@ p{
 .infoLeo{
     background-color: #0077b6;
     margin-top: -1.6%;
+    position:relative;
+    height : 200px;
 }
 .h1Leo{
     
@@ -55,45 +56,58 @@ p{
     margin-left: 14.5%;
     
 }
-.profesioni{
-    position: relative;
-}
 .infoOlti{
     position: relative;
     background-color: #00308F;
-    margin-top: 2.23%;
     height: 200px;
+
 }
-.olti{
+.olti, .isma, .zana, .gyltene{
     width: 200px;
     height: 200px;
     border-radius: 100px;
-    margin-top: %;
-}
+    }
 h1{
     color: white;
 }
-.h1Olti{
+.h1Olti, .h1Isma, .h1Zana, .h1Gyltene{
     margin-left: 14%;
     margin-top: -12%;
 
 }
-.pOlti{
+.pOlti, .pIsma, .pZana, .pGyltene{
     position: absolute;
     margin-left: 14.5%;
     margin-top: 0%;
 }
-#butoniPerMesazhOlti{
+#butoniPerMesazh{
     position: absolute;
     margin-left: 14.5%;
     margin-top: 1.5%;
 }
-#butoni-thirrjeOlti{
+#butoni-thirrje{
     position: absolute;
     margin-left: 14.5%;
     margin-top: -1%;
 }
-.numriOlti{
+.numri{
     margin-left: 14.5%;
     margin-top: 5%;
+}
+
+.infoIsma{
+    position: relative;
+    background-color: #011e58;
+    height: 200px;
+}
+
+.infoZana{
+    position: relative;
+    background-color: #00153f;
+    height: 200px;
+}
+.infoGyltene{
+    position: relative;
+    background-color: #010f2c;
+    height: 200px;
 }
