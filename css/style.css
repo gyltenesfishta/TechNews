@@ -1,3 +1,7 @@
+body{
+    background-color: black;
+}
+
 .nav-item{
     font-size: 25px;
 }
@@ -9,4 +13,28 @@
     width: 200px;
    
     padding: 5px;
+}
+.kopertina{
+    margin-top: -2%;
+    margin-left: 36.9%;
+}
+.tekstiNeBalline{
+    position: absolute;
+    margin-top: -30%;
+    font-size: 75px;
+    color: white;
+}
+
+.intel{
+    width: 100%;
+    height: 550px;
+    position: relative;
+}
+.amd{
+    width: 100%;
+    height: 550px;
+}
+.nvidia {
+    width: 100%;
+    height: 550px;
 }
