@@ -1,0 +1,20 @@
+.paragrafi{
+    margin: 100px;
+    padding:150px;
+}
+.paragrafi>p{
+    text-align: justify;
+    font-size:30px;
+    color:darkslategrey;
+}
+img{
+    height:300;
+    width:500px;
+  padding-left:450px;
+  padding-right: 500px;
+  padding-bottom: 0px;
+}
+h2{
+    color:darkolivegreen;
+    font-size:40px;
+}
