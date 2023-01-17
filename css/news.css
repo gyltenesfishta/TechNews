@@ -20,15 +20,40 @@ a{
     color: black;
 }
 
-.plajmi1{
-    margin-left: 50%;
-
+.hlajmi1{
+    margin-left: 40%;
+    margin-top: -22%;
+    position: absolute;
 }
+
+.hlajmi2, .hlajmi3{
+    position: absolute;
+    margin-left: 18%;
+    margin-top: -6%;
+}
+
+.plajmi1{
+    margin-left: 40%;
+    margin-top: -17%;
+    margin-right: 30%;
+    font-size: 15px;
+    position: absolute;
+}
+
+
 
 .foto1{
     width: 480px;
     margin: 80px;
-    margin-left: 200px;
+    margin-left: 100px;
+    position: relative;
+}
+
+.foto2{
+    position: relative;
+}
+
+.lajmi1{
 }
 
 .lajmet12, .lajmet34{
@@ -37,9 +62,10 @@ a{
 }
 
 .lajmet34{
-    padding-top: 100px;
+    padding-top: 10px;
 }
 
 .foto{
-    height: 200px;
+    height: 100px;
+    margin-left: 110px;
 }
