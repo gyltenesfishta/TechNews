@@ -7,6 +7,51 @@
 .logo{
     height: 70px;
     width: 200px;
-   
     padding: 5px;
+}
+
+body{
+    background-color:antiquewhite;
+}
+
+.lajmi1{
+    height: 280px;
+    width: 300px;
+}
+
+.flajmi1{
+    width: fit-content;
+    height: fit-content;
+}
+
+.lajmi3{
+    float:left;
+    margin-top:50px;
+}
+
+.lajmi2 > img{
+    height:300px;
+    width:300px;
+    margin-top: 50px;
+}
+
+a{
+    display: block;
+    color:black;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.lajmet{
+    display: flex;
+    gap: 500px;
+}
+
+a:hover{
+  color:midnightblue;
+}
+
+.lajmi2{
+position: absolute;
+margin-top:280px;
 }
