@@ -80,12 +80,12 @@ h1{
     margin-left: 14.5%;
     margin-top: 0%;
 }
-#butoniPerMesazh{
+#butoniPerMesazhOlti, #butoniPerMesazhIsma, #butoniPerMesazhZana, #butoniPerMesazhGyltene{
     position: absolute;
     margin-left: 14.5%;
     margin-top: 1.5%;
 }
-#butoni-thirrje{
+#butoni-thirrje, #butoni-thirrjeOlti, #butoni-thirrjeIsma, #butoni-thirrjeZana, #butoni-thirrjeGyltene{
     position: absolute;
     margin-left: 14.5%;
     margin-top: -1%;
