@@ -111,7 +111,7 @@ h1{
     background-color: #010f2c;
     height: 200px;
 }
-.submit{
+#submit{
     border-radius: 10px;
     color: red;
     font-weight: bold;
