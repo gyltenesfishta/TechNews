@@ -1,0 +1,22 @@
+.f1{
+    width: 480px;
+    margin: 80px;
+    margin-left: 100px;
+    position: relative; 
+}
+g{
+margin-left: 40%;
+margin-top: -17%;
+margin-right: 30%;
+font-size: 15px;
+position: absolute;
+}
+.f{
+    margin:100px;
+    padding:50px;
+}
+a{
+    text-decoration: none;
+    color:black;
+
+}
