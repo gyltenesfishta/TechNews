@@ -38,3 +38,15 @@ body{
     width: 100%;
     height: 550px;
 }
+
+.subscribe{
+
+    padding-left: 2%;
+    padding-right: 2%;
+    margin-top: -9%;
+    padding-bottom: 5%;
+}
+
+.submit_button{
+    padding-top: 0.5%;
+}

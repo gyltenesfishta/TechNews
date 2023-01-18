@@ -18,7 +18,7 @@ body{
 
 a{
     text-decoration: none;
-    color: black;
+    color: #0D3B66;
 }
 
 .hlajmi1{
@@ -75,22 +75,22 @@ table{
     text-align: center;
     padding:200px;
     margin:100px;
- 
-    
-   }
-   a{
-       text-decoration: none;
-   }
-   a:hover{
-       color:red;
-     
-   }
+}
 
-   .Page1{
+
+a{
+    text-decoration: none;
+}
+
+a:hover{
+    color:red;
+}
+
+.Page1{
     background-color:darkslategrey;
-   }
-   .tabelat{
-  margin-left:550px;
-  margin-right:550px;
-  
-   }
+}
+
+.tabelat{
+    margin-left:550px;
+    margin-right:550px;
+}
