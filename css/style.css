@@ -8,6 +8,8 @@ body{
 .navbar-brand{
     font-size: 25px;
 }
+
+
 .logo{
     height: 70px;
     width: 200px;
@@ -66,4 +68,7 @@ a:hover{
 }
 .emailText{
     border-radius: 8px;
+}
+a{
+    text-decoration: none;
 }

@@ -38,3 +38,32 @@ a{
 a:hover{
     color:red;
 }
+.l1{
+    position: relative;
+}
+.hlajmi1 {
+    margin-left: 40%;
+    margin-top: -24%;
+    position: absolute;
+}
+.header-container-search{
+    position: relative;
+}
+.searchText{
+    position: absolute;
+    margin-left: 700px;
+    margin-top: 1%;
+    border-radius: 5px;
+    border-color: yellow;
+    color: black;
+}
+.searchButton{
+    margin-left: 900px;
+    margin-top: 1%;
+    border-radius: 5px;
+    border-color: blue;
+    color: black;
+}
+.emailText{
+    border-radius: 8px;
+}
