@@ -48,7 +48,8 @@ body{
 }
 
 .submit_button{
-    padding-top: 0.5%;
+padding-top: 0.5%;
+}
 #submit{
     border-radius: 10px;
     color: red;
