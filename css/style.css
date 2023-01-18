@@ -49,4 +49,32 @@ body{
 
 .submit_button{
     padding-top: 0.5%;
+#submit{
+    border-radius: 10px;
+    color: red;
+    font-weight: bold;
+}
+a:hover{
+    color: black;
+}
+.header-container-search{
+    position: relative;
+}
+.searchText{
+    position: absolute;
+    margin-left: 700px;
+    margin-top: 1%;
+    border-radius: 5px;
+    border-color: yellow;
+    color: black;
+}
+.searchButton{
+    margin-left: 900px;
+    margin-top: 1%;
+    border-radius: 5px;
+    border-color: blue;
+    color: black;
+}
+.emailText{
+    border-radius: 8px;
 }
