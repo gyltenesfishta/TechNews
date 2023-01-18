@@ -70,17 +70,27 @@ a{
 
 
 table{
-    width:100px;
+    width:150px;
     height: 30px;
     text-align: center;
     padding:200px;
     margin:100px;
+ 
+    
    }
    a{
        text-decoration: none;
    }
    a:hover{
        color:red;
+     
    }
 
-   
+   .Page1{
+    background-color:darkslategrey;
+   }
+   .tabelat{
+  margin-left:550px;
+  margin-right:550px;
+  
+   }
