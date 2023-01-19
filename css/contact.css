@@ -20,8 +20,8 @@
     margin-top: -5px;
 }
 .dropdown-menu{
-    background-color: #0275d8;
-    
+    background-color:dodgerblue;
+    height: 118px; 
 }
 .dropdown-item{
     font-size: 25px;

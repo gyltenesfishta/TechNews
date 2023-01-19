@@ -21,7 +21,7 @@ body{
 }
 .dropdown-menu{
     background-color:dodgerblue;
-    height: 180px; 
+    height: 118px; 
 }
 .dropdown-item{
     margin-top: -10px;
@@ -100,21 +100,6 @@ a:hover{
 }
 .header-container-search{
     position: relative;
-}
-.searchText{
-    position: absolute;
-    margin-left: 700px;
-    margin-top: 1%;
-    border-radius: 5px;
-    border-color: yellow;
-    color: black;
-}
-.searchButton{
-    margin-left: 900px;
-    margin-top: 1%;
-    border-radius: 5px;
-    border-color: blue;
-    color: black;
 }
 
 
