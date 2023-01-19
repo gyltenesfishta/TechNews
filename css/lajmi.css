@@ -83,3 +83,16 @@ a:hover{
     margin-top: -50px;
     display: inline-block;
 }
+#submit{
+    border-radius: 10px;
+    color: red;
+    font-weight: bold;
+}
+.emailText{
+    border-radius: 8px;
+}
+.subscribe{
+    position: absolute;
+    margin-top: -50px;
+    color: gray;
+}
