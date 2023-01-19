@@ -52,46 +52,58 @@ li{
     border-radius: 100px;
 }
 .infoLeo{
-    background-color: #0077b6;
+    background-color:darkgray;
     margin-top: -1.6%;
     position:relative;
-    height : 200px;
+    height : 230px;
+  padding-top:10px;
+  padding-bottom:10px;
+   
 }
 .h1Leo{
     
     margin-left: 14%;
     margin-top: -12%;
-    color: white;
+    color:darkslategray;
 }
 .pLeo{
     text-align: center;
     margin-right: 57%;
     color: white;
     margin-left: 2%;
+    color:black;
 }
 
 .numriLeo{
     margin-left: 14.5%;
     color: white;
     margin-top: 3%;
+    color:black;
 }
 #butoniPerMesazhLeo{
     position: absolute;
     text-align: center;
     margin-left: 14.5%;
     margin-top: -1%;
+background-color:white
 
 }
 #butoni-thirrjeLeo{
     position: absolute;
     margin-top: 3.5%;
     margin-left: 14.5%;
+    background-color: white;
     
+}
+#butoni-thirrjeLeo:hover{
+    color:green;
 }
 .infoOlti{
     position: relative;
-    background-color: #00308F;
-    height: 200px;
+    background-color:darkgray;
+    height: 250px;
+   padding-top:10px;
+   padding-bottom:15px;
 
 }
 .olti, .isma, .zana, .gyltene{
@@ -100,7 +112,7 @@ li{
     border-radius: 100px;
     }
 h1{
-    color: white;
+    color: darkslategray;
 }
 .h1Olti, .h1Isma, .h1Zana, .h1Gyltene{
     margin-left: 14%;
@@ -111,41 +123,59 @@ h1{
     position: absolute;
     margin-left: 14.5%;
     margin-top: 0%;
-    color:white;
+    color:black;
+    
 }
 #butoniPerMesazhOlti, #butoniPerMesazhIsma, #butoniPerMesazhZana, #butoniPerMesazhGyltene{
     position: absolute;
     margin-left: 14.5%;
     margin-top: 1.5%;
+    background-color: white;
     
+}
+#butoniPerMesazhLeo:hover, #butoniPerMesazhOlti:hover, #butoniPerMesazhIsma:hover, #butoniPerMesazhZana:hover, #butoniPerMesazhGyltene:hover{
+color:green;
+
+
 }
 #butoni-thirrje, #butoni-thirrjeOlti, #butoni-thirrjeIsma, #butoni-thirrjeZana, #butoni-thirrjeGyltene{
     position: absolute;
     margin-left: 14.5%;
     margin-top: -1%;
+    background-color:white;
+}
+ #butoni-thirrjeOlti:hover, #butoni-thirrjeIsma:hover, #butoni-thirrjeZana:hover, #butoni-thirrjeGyltene:hover{
+color:green;
 }
 .numri{
     margin-left: 14.5%;
     margin-top: 5%;
     color:white;
+    color:black;
 }
 
 .infoIsma{
     position: relative;
-    background-color: #011e58;
-    height: 200px;
+    background-color:darkgrey;
+    height: 250px;
+    padding-top:10px;
+    padding-bottom:20px;
 }
 
 .infoZana{
     position: relative;
-    background-color: #00153f;
-    height: 200px;
+    background-color:darkgray;
+    height: 260px;
+    padding-top:10px;
+    padding-bottom:10px;
 }
 
 .infoGyltene{
     position: relative;
-    background-color: #010f2c;
-    height: 200px;
+    background-color:darkgray;
+    height: 270px;
+    padding-top:10px;
+    padding-bottom:10px;
 }
 #submit{
     border-radius: 10px;
@@ -176,3 +206,4 @@ a:hover{
 .emailText{
     border-radius: 8px;
 }
+
