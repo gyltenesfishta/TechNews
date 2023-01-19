@@ -24,7 +24,7 @@ body{
     margin-top: -5px;
 }
 .dropdown-menu{
-    background-color: #0275d8;
+    background-color:dodgerblue;
     height: 180px;
     
     
@@ -129,4 +129,10 @@ a:hover{
 }
 a{
     text-decoration: none;
+}
+
+.blue{
+    width:1700px;
+    height:800px;
+    padding-right:100px;
 }
