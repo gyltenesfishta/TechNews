@@ -16,6 +16,12 @@ body{
 li{
     margin-top: 4%;
 }
+.navbar{
+    height: 90px;
+}
+li{
+    margin-top: 4%;
+}
 
 .logo{
     height: 70px;
@@ -84,6 +90,8 @@ a:hover{
     border-color: blue;
     color: black;
 }
+
+
 .emailText{
     border-radius: 8px;
 }
