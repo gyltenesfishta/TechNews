@@ -1,8 +1,6 @@
 body{
     background-color: black;
 }
-
-
 .nav-item{
     font-size: 25px;
     
@@ -60,11 +58,11 @@ li{
     margin-top: -2%;
     margin-left: 36.9%;
 }
+
 .tekstiNeBalline{
     position: absolute;
-    margin-top: -30%;
     font-size: 75px;
-    color: white;
+    color: black;
 }
 
 .intel{
@@ -128,7 +126,5 @@ a{
 }
 
 .blue{
-    width:1700px;
-    height:800px;
-    padding-right:100px;
+    width: 100%;
 }
