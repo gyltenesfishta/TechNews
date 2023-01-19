@@ -9,11 +9,17 @@ body{
     font-size: 25px;
 }
 
+.navbar{
+    height: 90px;
+}
+
+li{
+    margin-top: 4%;
+}
 
 .logo{
     height: 70px;
     width: 200px;
-   
     padding: 5px;
 }
 .kopertina{
