@@ -80,7 +80,7 @@ li{
     color: black;
     margin-top: 3%;
 }
-#butoniPerMesazh{
+#butoniPerMesazhLeo, #butoniPerMesazhOlti, #butoniPerMesazhIsma, #butoniPerMesazhZana , #butoniPerMesazhGyltene{
     position: absolute;
     text-align: center;
     margin-left: 17.5%;
@@ -88,10 +88,10 @@ li{
     border-radius: 10px;  
 
 }
-#butoniPerMesazh:hover{
+#butoniPerMesazhLeo:hover,#butoniPerMesazhOlti:hover,#butoniPerMesazhIsma:hover,#butoniPerMesazhZana:hover,#butoniPerMesazhGyltene:hover{
     color:green;
 }
-#butoni-thirrjeLeo:hover, #butoni-thirrje:hover{
+#butoni-thirrjeLeo:hover, #butoni-thirrjeOlti:hover, #butoni-thirrjeIsma:hover,#butoni-thirrjeZana:hover,#butoni-thirrjeGyltene:hover{
     color: green;
 }
 #butoni-thirrjeLeo{
@@ -100,7 +100,7 @@ li{
     margin-left: 17.5%;
     border-radius: 10px;  
 }
-#butoni-thirrje{
+#butoni-thirrjeOlti,#butoni-thirrjeIsma,#butoni-thirrjeZana,#butoni-thirrjeGyltene{
     position: absolute;
     margin-top: -1%;
     margin-left: 17.5%;   
