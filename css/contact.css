@@ -52,27 +52,27 @@ li{
     border-radius: 100px;
 }
 .infoLeo{
-    background-color: #0077b6;
+    background-color:gray;
     margin-top: 1%;
     position:relative;
-    height : 200px;
+    height : 250px;
 }
 .h1Leo{
     
     margin-left: 14%;
     margin-top: -12%;
-    color: white;
+    color: darkslategray;
 }
 .pLeo{
     text-align: center;
     margin-right: 57%;
-    color: white;
+    color: black;;
     margin-left: 2%;
 }
 
 .numriLeo{
     margin-left: 14.5%;
-    color: white;
+    color: black;
     margin-top: 3%;
 }
 #butoniPerMesazhLeo{
@@ -82,16 +82,22 @@ li{
     margin-top: -1%;
 
 }
+#butoniPerMesazhLeo:hover{
+    color:green;
+}
 #butoni-thirrjeLeo{
     position: absolute;
     margin-top: 3.5%;
     margin-left: 14.5%;
     
 }
+#butoni-thirrjeLeo:hover{
+    color:green;
+}
 .infoOlti{
     position: relative;
-    background-color: #00308F;
-    height: 200px;
+    background-color:gray;
+    height: 250px;
 
 }
 .olti, .isma, .zana, .gyltene{
@@ -100,7 +106,7 @@ li{
     border-radius: 100px;
     }
 h1{
-    color: white;
+    color: darkslategray;
 }
 .h1Olti, .h1Isma, .h1Zana, .h1Gyltene{
     margin-left: 14%;
@@ -111,7 +117,7 @@ h1{
     position: absolute;
     margin-left: 14.5%;
     margin-top: 0%;
-    color:white;
+    color:black;
 }
 #butoniPerMesazhOlti, #butoniPerMesazhIsma, #butoniPerMesazhZana, #butoniPerMesazhGyltene{
     position: absolute;
@@ -119,33 +125,40 @@ h1{
     margin-top: 1.5%;
     
 }
+#butoniPerMesazhOlti:hover, #butoniPerMesazhIsma:hover, #butoniPerMesazhZana:hover, #butoniPerMesazhGyltene:hover{
+color:green;
+
+}
 #butoni-thirrje, #butoni-thirrjeOlti, #butoni-thirrjeIsma, #butoni-thirrjeZana, #butoni-thirrjeGyltene{
     position: absolute;
     margin-left: 14.5%;
     margin-top: -1%;
 }
+#butoni-thirrjeOlti:hover, #butoni-thirrjeIsma:hover, #butoni-thirrjeZana:hover, #butoni-thirrjeGyltene:hover{
+    color:green;
+}
 .numri{
     margin-left: 14.5%;
     margin-top: 5%;
-    color:white;
+    color:black;
 }
 
 .infoIsma{
     position: relative;
-    background-color: #011e58;
-    height: 200px;
+    background-color:gray;
+    height: 250px;
 }
 
 .infoZana{
     position: relative;
-    background-color: #00153f;
-    height: 200px;
+    background-color: gray;
+    height: 260px;
 }
 
 .infoGyltene{
     position: relative;
-    background-color: #010f2c;
-    height: 200px;
+    background-color: gray;
+    height: 270px;
 }
 #submit{
     border-radius: 10px;
