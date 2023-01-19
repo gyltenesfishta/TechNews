@@ -1,0 +1,85 @@
+.nav-item{
+    font-size: 25px;
+}
+.navbar-brand{
+    font-size: 25px;
+}
+.logo{
+    height: 70px;
+    width: 200px;
+   
+    padding: 5px;
+}
+
+.navbar{
+    height: 90px;
+}
+
+li{
+    margin-top: 4%;
+}
+
+.paragrafi{
+    margin-top: 100px;
+    margin-left: 50px;
+    margin-bottom: 60px;
+    padding-top: 90px;
+    padding-left: 60px;
+    text-align: justify;
+    font-size: 18px;
+    color:darkslategrey;
+    font-family: 'Nunito Sans';
+    line-height: 1.43;
+    padding-right: 25%;
+}
+
+h2{
+    color:#0D3B66;
+    font-size: 35px;
+    margin-bottom: -8%;
+    margin-top: 2%;
+}
+
+.foto{
+    width: 950px;
+    height: 450px;
+    margin-left: 8%;
+    margin-top: 5%;
+    margin-bottom: -12%;
+}
+
+.fotonemes{
+    width: 950px;
+    margin-left: 4%;
+    margin-bottom: -10%;
+}
+
+table{
+    width:  150px;
+    height: 30px;
+    text-align: center;
+    margin: 30px;
+}
+
+a{
+    text-decoration: none;
+    color:black;
+}
+
+a:hover{
+    color:red;
+}
+
+.back{
+    margin-left: 100px;
+    margin-bottom: 20px;
+    margin-top: -50px;
+    display: inline-block;
+}
+
+.next{
+    margin-left: 60%;
+    margin-bottom: 20px;
+    margin-top: -50px;
+    display: inline-block;
+}

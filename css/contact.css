@@ -1,14 +1,50 @@
 
 .nav-item{
     font-size: 25px;
+    
+}
+.nav-link{
+    color: white;
+}
+.nav-link:hover{
+    color: black;
+
 }
 .navbar-brand{
     font-size: 25px;
 }
 .logo{
-    height: 70px;
-    width: 200px;
+    
+    
     padding: 5px;
+    margin-top: -5px;
+}
+.dropdown-menu{
+    background-color: #0275d8;
+    
+}
+.dropdown-item{
+    font-size: 25px;
+    padding: 10px;
+    text-align: center;
+    padding-bottom: -5px;
+    margin-top: 15px;
+    color: white;
+
+}
+.dropdown-item:hover{
+    background-color: black;
+    color: white;
+    
+}
+
+
+.navbar{
+    height: 95px;
+}
+
+li{
+    margin-top: -20px;
 }
 .leo{
     width: 200px;
@@ -110,4 +146,33 @@ h1{
     position: relative;
     background-color: #010f2c;
     height: 200px;
+}
+#submit{
+    border-radius: 10px;
+    color: red;
+    font-weight: bold;
+}
+a:hover{
+    color: black;
+}
+.header-container-search{
+    position: relative;
+}
+.searchText{
+    position: absolute;
+    margin-left: 700px;
+    margin-top: 1%;
+    border-radius: 5px;
+    border-color: yellow;
+    color: black;
+}
+.searchButton{
+    margin-left: 900px;
+    margin-top: 1%;
+    border-radius: 5px;
+    border-color: blue;
+    color: black;
+}
+.emailText{
+    border-radius: 8px;
 }
