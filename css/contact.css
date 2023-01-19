@@ -14,15 +14,14 @@
     font-size: 25px;
 }
 .logo{
-    
-    
     padding: 5px;
     margin-top: -5px;
 }
 .dropdown-menu{
-    background-color: #0275d8;
-    
+    background-color:dodgerblue;
+    height: 118px; 
 }
+
 .dropdown-item{
     font-size: 25px;
     padding: 10px;
@@ -46,94 +45,69 @@
 li{
     margin-top: 5px;
 }
-.leo{
+.foto{
     width: 200px;
     height: 200px;
     border-radius: 100px;
 }
+.info{
+    background-color:#E6E6E6;
+    position: relative;
+    height : 250px;
+    padding-left: 20%;
+    font-family: monospace;
+
+}
 .infoLeo{
-    background-color:gray;
+    background-color:#E6E6E6;
     position:relative;
     height : 250px;
+
 }
-.h1Leo{
+.header{
     
-    margin-left: 14%;
-    margin-top: -12%;
+    margin-left: 20%;
+    margin-top: -16%;
     color: darkslategray;
 }
-.pLeo{
-    text-align: center;
-    margin-right: 57%;
-    color: black;;
-    margin-left: 2%;
+.pstaf{
+    color: black;
+    margin-left: 22%;
 }
 
 .numriLeo{
-    margin-left: 14.5%;
+    margin-left: 22%;
     color: black;
     margin-top: 3%;
 }
-#butoniPerMesazhLeo{
+#butoniPerMesazhLeo, #butoniPerMesazhOlti, #butoniPerMesazhIsma, #butoniPerMesazhZana , #butoniPerMesazhGyltene{
     position: absolute;
     text-align: center;
-    margin-left: 14.5%;
+    margin-left: 17.5%;
     margin-top: -1%;
+    border-radius: 10px;  
 
 }
-#butoniPerMesazhLeo:hover{
+#butoniPerMesazhLeo:hover,#butoniPerMesazhOlti:hover,#butoniPerMesazhIsma:hover,#butoniPerMesazhZana:hover,#butoniPerMesazhGyltene:hover{
     color:green;
+}
+#butoni-thirrjeLeo:hover, #butoni-thirrjeOlti:hover, #butoni-thirrjeIsma:hover,#butoni-thirrjeZana:hover,#butoni-thirrjeGyltene:hover{
+    color: green;
 }
 #butoni-thirrjeLeo{
     position: absolute;
-    margin-top: 3.5%;
-    margin-left: 14.5%;
-    
+    margin-top: 2.85%;
+    margin-left: 17.5%;
+    border-radius: 10px;  
+}
+#butoni-thirrjeOlti,#butoni-thirrjeIsma,#butoni-thirrjeZana,#butoni-thirrjeGyltene{
+    position: absolute;
+    margin-top: -1%;
+    margin-left: 17.5%;   
+    border-radius: 10px;  
+ 
 }
 #butoni-thirrjeLeo:hover{
-    color:green;
-}
-.infoOlti{
-    position: relative;
-    background-color:gray;
-    height: 250px;
-
-}
-.olti, .isma, .zana, .gyltene{
-    width: 200px;
-    height: 200px;
-    border-radius: 100px;
-    }
-h1{
-    color: darkslategray;
-}
-.h1Olti, .h1Isma, .h1Zana, .h1Gyltene{
-    margin-left: 14%;
-    margin-top: -12%;
-
-}
-.pOlti, .pIsma, .pZana, .pGyltene{
-    position: absolute;
-    margin-left: 14.5%;
-    margin-top: 0%;
-    color:black;
-}
-#butoniPerMesazhOlti, #butoniPerMesazhIsma, #butoniPerMesazhZana, #butoniPerMesazhGyltene{
-    position: absolute;
-    margin-left: 14.5%;
-    margin-top: 1.5%;
-    
-}
-#butoniPerMesazhOlti:hover, #butoniPerMesazhIsma:hover, #butoniPerMesazhZana:hover, #butoniPerMesazhGyltene:hover{
-color:green;
-
-}
-#butoni-thirrje, #butoni-thirrjeOlti, #butoni-thirrjeIsma, #butoni-thirrjeZana, #butoni-thirrjeGyltene{
-    position: absolute;
-    margin-left: 14.5%;
-    margin-top: -1%;
-}
-#butoni-thirrjeOlti:hover, #butoni-thirrjeIsma:hover, #butoni-thirrjeZana:hover, #butoni-thirrjeGyltene:hover{
     color:green;
 }
 .numri{
@@ -142,23 +116,6 @@ color:green;
     color:black;
 }
 
-.infoIsma{
-    position: relative;
-    background-color:gray;
-    height: 250px;
-}
-
-.infoZana{
-    position: relative;
-    background-color: gray;
-    height: 260px;
-}
-
-.infoGyltene{
-    position: relative;
-    background-color: gray;
-    height: 270px;
-}
 #submit{
     border-radius: 10px;
     color: red;
@@ -178,4 +135,19 @@ a{
 .mx-2:hover{
     color: black;
     
+}
+.ekipa{
+    padding-left: 40%;
+    font-family: monospace;
+    background-color: #E6E6E6;
+}
+.pekipa{
+    font-family: monospace;
+    background-color: #E6E6E6;
+}
+
+.h1ekipa{
+    margin-left: 3%;
+    color: darkslategray;
+
 }

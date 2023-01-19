@@ -1,8 +1,6 @@
 body{
     background-color: black;
 }
-
-
 .nav-item{
     font-size: 25px;
     
@@ -23,7 +21,7 @@ body{
 }
 .dropdown-menu{
     background-color:dodgerblue;
-    height: 180px; 
+    height: 118px; 
 }
 .dropdown-item{
     margin-top: -10px;
@@ -60,11 +58,11 @@ li{
     margin-top: -2%;
     margin-left: 36.9%;
 }
+
 .tekstiNeBalline{
     position: absolute;
-    margin-top: -30%;
     font-size: 75px;
-    color: white;
+    color: black;
 }
 
 .intel{
@@ -103,21 +101,6 @@ a:hover{
 .header-container-search{
     position: relative;
 }
-.searchText{
-    position: absolute;
-    margin-left: 700px;
-    margin-top: 1%;
-    border-radius: 5px;
-    border-color: yellow;
-    color: black;
-}
-.searchButton{
-    margin-left: 900px;
-    margin-top: 1%;
-    border-radius: 5px;
-    border-color: blue;
-    color: black;
-}
 
 
 .emailText{
@@ -128,7 +111,5 @@ a{
 }
 
 .blue{
-    width:1700px;
-    height:800px;
-    padding-right:100px;
+    width: 100%;
 }

@@ -21,9 +21,7 @@
 }
 .dropdown-menu{
     background-color:dodgerblue;
-    height: 180px;
-    
-    
+    height: 118px; 
 }
 .dropdown-item{
     margin-top: -10px;

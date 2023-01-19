@@ -18,6 +18,10 @@
 li{
     margin-top: 4%;
 }
+.dropdown-menu{
+    background-color:dodgerblue;
+    height: 118px; 
+}
 .submit{
     border-radius: 10px;
     color: red;
