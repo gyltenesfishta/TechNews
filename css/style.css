@@ -18,16 +18,12 @@ body{
     font-size: 25px;
 }
 .logo{
-    
-    
     padding: 5px;
     margin-top: -5px;
 }
 .dropdown-menu{
     background-color:dodgerblue;
-    height: 180px;
-    
-    
+    height: 180px; 
 }
 .dropdown-item{
     margin-top: -10px;

@@ -40,11 +40,11 @@
 
 
 .navbar{
-    height: 95px;
+    height: 70px;
 }
 
 li{
-    margin-top: -20px;
+    margin-top: 5px;
 }
 .leo{
     width: 200px;
@@ -53,7 +53,7 @@ li{
 }
 .infoLeo{
     background-color: #0077b6;
-    margin-top: -1.6%;
+    margin-top: 1%;
     position:relative;
     height : 200px;
 }
@@ -162,4 +162,8 @@ a:hover{
 a{
     text-decoration: none;
     color: black;
+}
+.mx-2:hover{
+    color: black;
+    
 }

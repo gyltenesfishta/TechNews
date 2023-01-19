@@ -1,24 +1,59 @@
 .nav-item{
     font-size: 25px;
+    
+}
+.nav-link{
+    color: white;
+}
+.nav-link:hover{
+    color: black;
+
 }
 .navbar-brand{
     font-size: 25px;
 }
 .logo{
-    height: 70px;
-    width: 200px;
-   
+    
+    
     padding: 5px;
+    margin-top: -5px;
+}
+.dropdown-menu{
+    background-color:dodgerblue;
+    height: 180px;
+    
+    
+}
+.dropdown-item{
+    margin-top: -10px;
+    font-size: 25px;
+    padding: 0;
+    text-align: center;
+    padding-bottom:;
+    margin-top: 5px;
+    color: white;
+    height: 50px;
+}
+.dropdown-item:hover{
+    background-color: black;
+    color: white;
+    
 }
 
+
 .navbar{
-    height: 90px;
+    height: 70px;
 }
 
 li{
-    margin-top: 4%;
+    margin-top: 5px;
 }
-
+.logo{
+    
+    
+    padding: 5px;
+    margin-top: -5px;
+}
 .paragrafi{
     margin-top: 100px;
     margin-left: 50px;
