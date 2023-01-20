@@ -176,7 +176,7 @@
     </div>
   </section>
   <div class="subscribe_footer">
-    <h2>Subscribe To Our Newspaper</h2>
+    <h2 class="subscribe">Subscribe To Our Newspaper</h2>
     <div class="subsscribe_form">
       <form action="">
         <input type="email" id="email" placeholder="Enter Your Email Here" name="email" class="emailText">
@@ -191,7 +191,13 @@
   </div>
   <!-- Copyright -->
 </footer>
-
+<script>
+  $(document).ready(function() {
+$("#submit").click(function() {
+  alert("You successfully signed up!");
+});
+});
+</script>
 
 
 
