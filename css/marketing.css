@@ -97,18 +97,19 @@ a{
     left: 0;
     z-index: 1;
     margin-top: 250px;
-    margin-left: 24%;
+    margin-left: 23%;
     color: white;
     font-family: myFont;
     font-weight: bold;
     font-size: 70px;
     color: red;
 }
+
 .btn{
     position: absolute;
     width: 150px;
     height: 50px;
-    margin-top: 185px;
+    margin-top: 155px;
     margin-left: 45%;
     box-shadow: 2px 2px 3px red;
 
@@ -117,8 +118,9 @@ a{
 .teksti1{
     margin-top: 50px;
     text-align: center;
+    position: relative;
     font-family: Georgia, 'Times New Roman', Times, serif;
-    color: orangered;
+    color: rgb(0, 0, 0);
 }
 @font-face {
     font-family: myFont;
@@ -128,6 +130,5 @@ a{
 .Layer_1{
     width: 50px;
     margin-left: 56%;
-    z-index: 0;
 }
 
