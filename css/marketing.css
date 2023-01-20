@@ -117,8 +117,8 @@ a{
 .teksti1{
     margin-top: 50px;
     text-align: center;
-    font-family: monospace;
-    color: #30486c;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: orangered;
 }
 @font-face {
     font-family: myFont;
