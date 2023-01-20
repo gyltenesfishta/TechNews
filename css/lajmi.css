@@ -121,7 +121,7 @@ a:hover{
     color: red;
     font-weight: bold;
 }
-.emailText{
+.emailText,.passwordText{
     border-radius: 8px;
 }
 .subscribe{

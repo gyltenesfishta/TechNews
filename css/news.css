@@ -54,7 +54,10 @@ li{
 body{
     background-color:#E6E6E6;
 }
-
+#text_a{
+    text-decoration: none;
+    color: black;
+}
 a{
     text-decoration: none;
     color: black;
@@ -124,11 +127,11 @@ table{
     padding:200px;
     margin:100px;
 }
-
-
-a{
-    text-decoration: none;
+td{
+    padding: 3px;
 }
+
+
 
 a:hover{
     color:red;
@@ -143,7 +146,7 @@ a:hover{
   margin-right:550px;
   
    }
-   .subscribe{
+.subscribe{
 
     padding-left: 2%;
     padding-right: 2%;
@@ -159,7 +162,7 @@ padding-top: 0.5%;
     color: red;
     font-weight: bold;
 }
-.emailText{
+.emailText,.passwordText{
     border-radius: 8px;
 }
 .header-container-search{

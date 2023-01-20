@@ -98,7 +98,7 @@ Z. Wang përmendi një anekdotë nga një ish-drejtues i kërkimit dhe zhvillimi
     </li>
   </ul>
 </nav> 
-< <footer class="text-center text-lg-start bg-light text-muted">
+<footer class="text-center text-lg-start bg-light text-muted">
   <!-- Section: Social media -->
   <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
     
@@ -186,11 +186,21 @@ Z. Wang përmendi një anekdotë nga një ish-drejtues i kërkimit dhe zhvillimi
     </div>
   </section>
   <div class="subscribe_footer">
-    <h2 class="subscribe">Subscribe To Our Newspaper</h2>
+    <h2>Subscribe To Our Newspaper</h2>
     <div class="subsscribe_form">
       <form action="">
         <input type="email" id="email" placeholder="Enter Your Email Here" name="email" class="emailText">
-        <button type="submit" id="submit">SIGN UP</button>
+        <input type="password" id="password" placeholder="Enter Your Password Here" name="password" class="passwordText">
+          <input type="radio" id="Male" name="gender" value="Male"
+                 checked>
+          <label for="huey">Male</label>
+    
+          <input type="radio" id="Female" name="gender" value="Female">
+          <label for="dewey">Female</label>
+        </div>
+
+        <button type="submit" id="submit" draggable="true" >SIGN UP</button>
+
       </form>
   <!-- Section: Links  -->
 
@@ -201,6 +211,13 @@ Z. Wang përmendi një anekdotë nga një ish-drejtues i kërkimit dhe zhvillimi
   </div>
   <!-- Copyright -->
 </footer>
+              <script>
+                $(document).ready(function() {
+              $("#submit").click(function() {
+                alert("You successfully signed up!");
+              });
+            });
+              </script>
 
 <script src="../js/index.js"></script>
 

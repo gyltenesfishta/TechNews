@@ -66,9 +66,9 @@
         <br><br><br>
         Është e rëndësishme të dini se në të kaluarën, Apple bëri ndryshime më të mëdha në iPhone-in e saj të ri çdo vit, dhe kjo është arsyeja pse iPhone 14 ndihet ndryshe.
         <br><br><br>
-        Dallimet kryesore të iPhone 14 dhe iPhone 13:
+        <mark>Dallimet kryesore të iPhone 14 dhe iPhone 13:</mark>
         <br>
-        <ul>
+      <ul>
             <li>Dizajn shumë i ngjashëm (por 14 është pak më i trashë kështu që kutitë nga 13 nuk do të përshtaten)</li>
             <li>Kamera e re e përparme 12MP ƒ/1.9 me fokus automatik</li>
             <li>Kamera e re ultra e gjerë 12 MP</li>
@@ -86,7 +86,21 @@
         <br><br><br>
         Me vlerë nominale, ka të ngjarë të mos ketë mjaftueshëm për të justifikuar marrjen e modelit të ri mbi iPhone 13 për shumicën e klientëve. Çështjet mund të jenë të ndryshme nëse dëshironi një madhësi më të madhe të ekranit, megjithatë, pasi nuk ka asnjë të barabartë me iPhone 14 Plus në linjën e iPhone 13.
         <br><br><br>
-        IPhone 13 është ende shumë i aftë për përdorim të përditshëm, dhe iPhone 14 ndan shumicën dërrmuese të veçorive më të gjithanshme të iPhone 13, të tilla si çipi A15 Bionic, ekrani OLED Super Retina XDR, Mburoja qeramike, modaliteti i natës, uji MagSafe dhe IP. rezistenca, kështu që mund të jetë më mirë të presësh për një përmirësim më thelbësor.
+        IPhone 13 është ende shumë i aftë për përdorim të përditshëm, dhe iPhone 14 ndan shumicën dërrmuese të veçorive më të gjithanshme të iPhone 13, 
+        të tilla si:
+        <ol>
+          <li><mark>çipi A15 Bionic,</mark></li>
+          <li><mark>ekrani OLED Super Retina XDR,</mark></li>
+          <li><mark>Mburoja qeramike,</mark></li>
+          <li><mark>modaliteti i natës,</mark></li>
+          <li><mark>uji MagSafe,</mark></li>
+          <li><mark>IP,</mark></li>
+          <li><mark>rezistenca,</mark></li>
+
+
+
+        </ol>
+         kështu që mund të jetë më mirë të presësh për një përmirësim më thelbësor.
     </p>
     </div>
     <nav aria-label="Page navigation">
@@ -185,11 +199,21 @@
         </div>
       </section>
       <div class="subscribe_footer">
-        <h2 class="subscribe">Subscribe To Our Newspaper</h2>
+        <h2>Subscribe To Our Newspaper</h2>
         <div class="subsscribe_form">
           <form action="">
             <input type="email" id="email" placeholder="Enter Your Email Here" name="email" class="emailText">
-            <button type="submit" id="submit">SIGN UP</button>
+            <input type="password" id="password" placeholder="Enter Your Password Here" name="password" class="passwordText">
+              <input type="radio" id="Male" name="gender" value="Male"
+                     checked>
+              <label for="huey">Male</label>
+        
+              <input type="radio" id="Female" name="gender" value="Female">
+              <label for="dewey">Female</label>
+            </div>
+
+            <button type="submit" id="submit" draggable="true" >SIGN UP</button>
+
           </form>
       <!-- Section: Links  -->
     
@@ -200,12 +224,16 @@
       </div>
       <!-- Copyright -->
     </footer>
-    <script>
-      $(document).ready(function() {
-    $("#submit").click(function() {
-      alert("You successfully signed up!");
-    });
-  });
-    </script>
+                  <script>
+                    $(document).ready(function() {
+                  $("#submit").click(function() {
+                    alert("You successfully signed up!");
+                  });
+                });
+                  </script>
+
+ <script src="../js/index.js">
+    
+  </script>
 </body>
 </html>

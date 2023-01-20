@@ -125,7 +125,7 @@ a:hover{
     color: black;
 }
 
-.emailText{
+.emailText,.passwordText{
     border-radius: 8px;
 }
 a{
