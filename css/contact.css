@@ -21,15 +21,15 @@
     background-color:dodgerblue;
     height: 118px; 
 }
-
 .dropdown-item{
+    margin-top: -10px;
     font-size: 25px;
-    padding: 10px;
+    padding: 0;
     text-align: center;
-    padding-bottom: -5px;
-    margin-top: 15px;
+    padding-bottom:;
+    margin-top: 5px;
     color: white;
-
+    height: 50px;
 }
 .dropdown-item:hover{
     background-color: black;

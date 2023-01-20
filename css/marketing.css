@@ -1,0 +1,126 @@
+body{
+    background-color: #E6E6E6;
+}
+
+.nav-item{
+    font-size: 25px;
+    
+}
+.nav-link{
+    color: white;
+}
+.nav-link:hover{
+    color: black;
+
+}
+.navbar-brand{
+    font-size: 25px;
+}
+.logo{
+    padding: 5px;
+    margin-top: -5px;
+}
+.dropdown-menu{
+    background-color:dodgerblue;
+    height: 118px; 
+}
+.dropdown-item{
+    margin-top: -10px;
+    font-size: 25px;
+    padding: 0;
+    text-align: center;
+    padding-bottom:;
+    margin-top: 5px;
+    color: white;
+    height: 50px;
+}
+.dropdown-item:hover{
+    background-color: black;
+    color: white;
+    
+}
+
+
+.navbar{
+    height: 70px;
+}
+
+li{
+    margin-top: 5px;
+}
+.logo{
+    
+    
+    padding: 5px;
+    margin-top: -5px;
+}
+.subscribe{
+
+    padding-left: 2%;
+    padding-right: 2%;
+    margin-top: -9%;
+    padding-bottom: 5%;
+}
+
+.submit_button{
+padding-top: 0.5%;
+}
+#submit{
+    border-radius: 10px;
+    color: red;
+    font-weight: bold;
+}
+a:hover{
+    color: black;
+}
+.header-container-search{
+    position: relative;
+}
+
+
+.emailText{
+    border-radius: 8px;
+}
+a{
+    text-decoration: none;
+}
+.container{
+    position: relative;
+}
+.container video{
+    position: relative;
+    z-index: 0;
+}
+.teksti{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    margin-top: 250px;
+    margin-left: 24%;
+    color: white;
+    font-family: myFont;
+    font-weight: bold;
+    font-size: 70px;
+    color: red;
+}
+.btn{
+    position: absolute;
+    width: 150px;
+    height: 50px;
+    margin-top: 185px;
+    margin-left: 45%;
+    box-shadow: 2px 2px 3px red;
+
+}
+
+.teksti1{
+    margin-top: 50px;
+    text-align: center;
+    font-family: monospace;
+    color: #30486c;
+}
+@font-face {
+    font-family: myFont;
+    src: url(../html/JustOldFashion.ttf);
+}
