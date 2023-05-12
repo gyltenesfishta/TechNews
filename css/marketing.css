@@ -40,7 +40,9 @@ body{
     
 }
 
-
+img:hover{
+    cursor: pointer;
+}
 .navbar{
     height: 70px;
 }

@@ -1,3 +1,11 @@
+<?php
+session_start();
+if ($_SESSION["role"] == "Journalist") {
+    $_SESSION["nav_item"] = "Publiko";
+}
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,11 +22,11 @@
 <header>
     <nav class="navbar navbar-expand-lg navbar-dark p-3 bg-primary" id="headerNav">
       <div class="container-fluid">
-      <button type="button" class="btn btn-warning" style="margin-left:; position: absolute;"
-      onclick= "window.location.href = 'login.php';">Login</button>
-      <button type="button" class="btn btn-warning" style="margin-left: 80px; position: absolute;"
-      onclick= "window.location.href = 'signup.php';">Sign up</button>
-        
+      
+    <button type="submit" class="btn btn-warning" style="position: absolute;"
+    onclick = "window.location.href = 'login.php';"> Log out
+    </button>
+
         <a class="navbar-brand d-block d-lg-none" href="#">
           <img src="/static_files/images/logos/logo_2_white.png" height="80" />
         </a>
@@ -29,8 +37,10 @@
         <div class=" collapse navbar-collapse" id="navbarNavDropdown">
           <ul class="navbar-nav mx-auto ">
             <li class="nav-item">
+              
               <a class="nav-link mx-2" aria-current="page" href="index.php">Ballina</a>
             </li>
+            
             <li class="nav-item">
               <a class="nav-link mx-2" href="contact.php">Kontaktet</a>
             </li>
@@ -44,19 +54,20 @@
             </li>
             <li class="nav-item dropdown">
               <a class="nav-link mx-2 dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-  
                 Më shumë
-              </a>
-              <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              </a><?php if($_SESSION['role'] == "Journalist") { ?>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" style = "height: 190px;">
                 <li><a class="dropdown-item" href="historiku.php">Arkiva</a></li>
                 <li><a class="dropdown-item" href="marketing.php">Marketing</a></li>
+                <li><a class="dropdown-item" href="#"><?php echo $_SESSION["nav_item"]?></a></li>
+                <?php } ?>
 
               </ul>
             </li>
           </ul>
         </div>
       </div>
-      <img class="rounded-circle" alt="avatar1" src="../images/male-pfp.png" style="width: 50px;"/>
+      <img class="rounded-circle" alt="avatar1" src="../images/male-pfp.png" style="width: 50px; margin-right: 20px;">
 
     </nav>
 </header>
@@ -173,3 +184,5 @@
   </script>
 </body>
 </html>
+
+

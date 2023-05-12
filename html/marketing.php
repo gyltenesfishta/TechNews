@@ -1,3 +1,10 @@
+<?php
+session_start();
+if ($_SESSION["role"] == "Journalist") {
+    $_SESSION["nav_item"] = "Publiko";
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,8 +21,9 @@
 <header>
     <nav class="navbar navbar-expand-lg navbar-dark p-3 bg-primary" id="headerNav">
       <div class="container-fluid">
-        <button type="button" class="btn btn-warning" style="margin-top: 0.1px; position: absolute;">Login</button>
-        <button type="button" class="btn btn-warning" style="margin-left: 80px; margin-top: 0.1px; position: absolute;">Sign up</button>
+      <button type="submit" class="btn btn-warning" style="position: absolute;"
+    onclick = "window.location.href = 'login.php';"> Log out
+    </button>
         <a class="navbar-brand d-block d-lg-none" href="#">
           <img src="/static_files/images/logos/logo_2_white.png" height="80" />
         </a>
@@ -53,7 +61,7 @@
           </ul>
         </div>
       </div>
-      <img class="rounded-circle" alt="avatar1" src="../images/male-pfp.png" style="width: 50px;"/>
+      <img class="rounded-circle" alt="avatar1" src="../images/male-pfp.png" style="width: 50px; cursor: hand;" onclick = "window.location.href = 'profile.php'"/>
 
     </nav>
 </header>

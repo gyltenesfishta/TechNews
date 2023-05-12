@@ -36,8 +36,8 @@
   </div>
   <label for="role" class="form-label">Role</label>
   <select class="form-select mb-3" name="role" aria-label="Default select example">
-    <option value="1">User</option>
-    <option value="2">Journalist</option>
+    <option value="User">User</option>
+    <option value="Journalist">Journalist</option>
   </select>
   <div class="mb-3">
     <label for="username" class="form-label">Email</label>
