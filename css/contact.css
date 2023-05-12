@@ -10,6 +10,9 @@
     color: black;
 
 }
+a:hover{
+    cursor: hand;
+}
 .navbar-brand{
     font-size: 25px;
 }
@@ -150,4 +153,7 @@ a{
     margin-left: 3%;
     color: darkslategray;
 
+}
+.btn{
+    margin-top: 10px;
 }

@@ -11,9 +11,11 @@
     <title>TechNews.com - Lajmet e fundit nga teknologjia</title>
 </head>
 <body>
-  <header>
+<header>
     <nav class="navbar navbar-expand-lg navbar-dark p-3 bg-primary" id="headerNav">
       <div class="container-fluid">
+        <button type="button" class="btn btn-warning" style="margin-top: 0.1px; position: absolute;">Login</button>
+        <button type="button" class="btn btn-warning" style="margin-left: 80px; margin-top: 0.1px; position: absolute;">Sign up</button>
         <a class="navbar-brand d-block d-lg-none" href="#">
           <img src="/static_files/images/logos/logo_2_white.png" height="80" />
         </a>
@@ -24,18 +26,18 @@
         <div class=" collapse navbar-collapse" id="navbarNavDropdown">
           <ul class="navbar-nav mx-auto ">
             <li class="nav-item">
-              <a class="nav-link mx-2" aria-current="page" href="/html/index.html">Ballina</a>
+              <a class="nav-link mx-2" aria-current="page" href="index.php">Ballina</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link mx-2" href="/html/contact.html">Kontaktet</a>
+              <a class="nav-link mx-2" href="contact.php">Kontaktet</a>
             </li>
             <li class="nav-item d-none d-lg-block">
-              <a class="nav-link mx-2" href="/html/index.html">
+              <a class="nav-link mx-2" href="index.php">
                 <img src="../images/Tech-News.png" height="45px" width="200px" class="logo" />
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link mx-2" href="/html/news.html">Lajmet</a>
+              <a class="nav-link mx-2" href="news.php">Lajmet</a>
             </li>
             <li class="nav-item dropdown">
               <a class="nav-link mx-2 dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -43,16 +45,18 @@
                 Më shumë
               </a>
               <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                <li><a class="dropdown-item" href="historiku.html">Arkiva</a></li>
-                <li><a class="dropdown-item" href="marketing.html">Marketing</a></li>
+                <li><a class="dropdown-item" href="historiku.php">Arkiva</a></li>
+                <li><a class="dropdown-item" href="marketing.php">Marketing</a></li>
 
               </ul>
             </li>
           </ul>
         </div>
       </div>
+      <img class="rounded-circle" alt="avatar1" src="../images/male-pfp.png" style="width: 50px;"/>
+
     </nav>
-  </header>
+</header>
       <div class="container">
       <video width="100%" height="500px" loop autoplay>
         <source src="../videos/video.mp4" type="video/mp4">
@@ -61,7 +65,7 @@
       <div class="teksti">
         <p>Reklamoni brendin tuaj</p>
       </div>
-      <button type="button" class="btn btn-primary btn-round mr-md-3 mb-md-0 mb-2" id="butoni">Aplikoni</button>
+      <button type="button" class="btn1 btn-primary btn-round mr-md-3 mb-md-0 mb-2" id="butoni">Aplikoni</button>
       <div id="result"></div>
       
       <div class="paragrafi">
@@ -184,22 +188,7 @@
           </div>
         </section>
         <div class="subscribe_footer">
-          <h2>Subscribe To Our Newspaper</h2>
-          <div class="subsscribe_form">
-            <form action="">
-              <input type="email" id="email" placeholder="Enter Your Email Here" name="email" class="emailText">
-              <input type="password" id="password" placeholder="Enter Your Password Here" name="password" class="passwordText">
-                <input type="radio" id="Male" name="gender" value="Male"
-                       checked>
-                <label for="huey">Male</label>
           
-                <input type="radio" id="Female" name="gender" value="Female">
-                <label for="dewey">Female</label>
-              </div>
-  
-              <button type="submit" id="submit" draggable="true" >SIGN UP</button>
-  
-            </form>
         <!-- Section: Links  -->
       
         <!-- Copyright -->

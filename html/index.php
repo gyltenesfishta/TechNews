@@ -9,58 +9,60 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TechNews.com - Lajmet e fundit nga teknologjia</title>
-</head>
-    <header>
-      <nav class="navbar navbar-expand-lg navbar-dark p-3 bg-primary" id="headerNav">
-        <div class="container-fluid">
-          <a class="navbar-brand d-block d-lg-none" href="#">
-            <img src="/static_files/images/logos/logo_2_white.png" height="80" />
-          </a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-       
-          <div class=" collapse navbar-collapse" id="navbarNavDropdown">
-            <ul class="navbar-nav mx-auto ">
-              <li class="nav-item">
-                <a class="nav-link mx-2" aria-current="page" href="/html/index.html">Ballina</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link mx-2" href="/html/contact.html">Kontaktet</a>
-              </li>
-              <li class="nav-item d-none d-lg-block">
-                <a class="nav-link mx-2" href="/html/index.html">
-                  <img src="../images/Tech-News.png" height="45px" width="200px" class="logo" />
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link mx-2" href="/html/news.html">Lajmet</a>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link mx-2 dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
     
-                  Më shumë
-                </a>
-                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                  <li><a class="dropdown-item" href="historiku.html">Arkiva</a></li>
-                  <li><a class="dropdown-item" href="marketing.html">Marketing</a></li>
+</head>
+<header>
+    <nav class="navbar navbar-expand-lg navbar-dark p-3 bg-primary" id="headerNav">
+      <div class="container-fluid">
+      <button type="button" class="btn btn-warning" style="margin-left:; position: absolute;"
+      onclick= "window.location.href = 'login.php';">Login</button>
+      <button type="button" class="btn btn-warning" style="margin-left: 80px; position: absolute;"
+      onclick= "window.location.href = 'signup.php';">Sign up</button>
+        
+        <a class="navbar-brand d-block d-lg-none" href="#">
+          <img src="/static_files/images/logos/logo_2_white.png" height="80" />
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
 
-                </ul>
-              </li>
-            </ul>
-          </div>
+        <div class=" collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav mx-auto ">
+            <li class="nav-item">
+              <a class="nav-link mx-2" aria-current="page" href="index.php">Ballina</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link mx-2" href="contact.php">Kontaktet</a>
+            </li>
+            <li class="nav-item d-none d-lg-block">
+              <a class="nav-link mx-2" href="index.php">
+                <img src="../images/Tech-News.png" height="45px" width="200px" class="logo" />
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link mx-2" href="news.php">Lajmet</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link mx-2 dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+  
+                Më shumë
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <li><a class="dropdown-item" href="historiku.php">Arkiva</a></li>
+                <li><a class="dropdown-item" href="marketing.php">Marketing</a></li>
+
+              </ul>
+            </li>
+          </ul>
         </div>
-      </nav>
-    </header>
+      </div>
+      <img class="rounded-circle" alt="avatar1" src="../images/male-pfp.png" style="width: 50px;"/>
+
+    </nav>
+</header>
     <span>
-    <img  class="blue" src="/images/tech1.jpg">
+    <img  class="blue" src="../images/tech1.jpg">
     </span>
-    <!---
-    <img src="../images/kopertina.jpg" alt="" class="kopertina">
-    <p class="tekstiNeBalline"><b>THE LATEST <br> NEWS  ON <br> TECHNOLOGY</b></p>
-    <a href="https://www.intel.com/content/www/us/en/homepage.html" target="_blank"><img src="../images/intel.jpg" alt="" class="intel"></a>
-    <a href="https://www.amd.com/en" target="_blank"><img src="../images/amd.jpg" alt="" class="amd"></a>
-    <a href="https://www.nvidia.com/en-eu/geforce/" class="text-reset" target="_blank"><img src="../images/nvidia.jpg" alt="" class="nvidia"></a>-->
     <!-- Footer -->
     <footer class="text-center text-lg-start bg-light text-muted">
       <!-- Section: Social media -->
@@ -150,22 +152,6 @@
         </div>
       </section>
       <div class="subscribe_footer">
-        <h2>Subscribe To Our Newspaper</h2>
-        <div class="subsscribe_form">
-          <form action="">
-            <input type="email" id="email" placeholder="Enter Your Email Here" name="email" class="emailText">
-            <input type="password" id="password" placeholder="Enter Your Password Here" name="password" class="passwordText">
-              <input type="radio" id="Male" name="gender" value="Male"
-                     checked>
-              <label for="huey">Male</label>
-        
-              <input type="radio" id="Female" name="gender" value="Female">
-              <label for="dewey">Female</label>
-            </div>
-
-            <button type="submit" id="submit" draggable="true" >SIGN UP</button>
-
-          </form>
       <!-- Section: Links  -->
     
       <!-- Copyright -->

@@ -28,7 +28,6 @@ body{
     font-size: 25px;
     padding: 0;
     text-align: center;
-    padding-bottom:;
     margin-top: 5px;
     color: white;
     height: 50px;
@@ -113,4 +112,9 @@ a{
 
 .blue{
     width: 100%;
+}
+.btn{
+    margin-top: 0;
+    margin-right: 150px;
+    
 }
