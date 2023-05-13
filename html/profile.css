@@ -125,3 +125,9 @@ a{
     position: absolute;
     margin-left: 20px;
 }
+
+
+.log_out_btn{
+    margin-left: 380px;
+    white-space: nowrap;  
+}

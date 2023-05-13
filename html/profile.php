@@ -30,9 +30,7 @@ if ($_SESSION["role"] == "Journalist") {
 <header>
     <nav class="navbar navbar-expand-lg navbar-dark p-3 bg-primary" id="headerNav">
       <div class="container-fluid">
-        <form  method="post">
-      <button type="submit" name = "logout" class="btn btn-warning"  onclick = "window.location.href = 'login.php';"> Log out</button>
-      </form>
+
         <a class="navbar-brand d-block d-lg-none" href="#">
           <img src="/static_files/images/logos/logo_2_white.png" height="80" />
         </a>
@@ -83,10 +81,7 @@ if ($_SESSION["role"] == "Journalist") {
               class="rounded-circle img-fluid" style="width: 150px;">
             <h5 class="my-3"><?php echo $_SESSION["name"] . " " . $_SESSION["lastname"]; ?></h5> 
             <p class="text-muted mb-1"><?php echo $_SESSION["role"]; ?></p>
-            <div class="d-flex justify-content-center mb-2">
-              <button type="button" id="fllw_btn" class="btn btn-primary">Follow</button>
-              <button type="button" id="msg_btn" class="btn btn-outline-primary ms-1">Message</button>
-            </div>
+
           </div>
         </div>
         <div class="card mb-4 mb-lg-0">
@@ -105,13 +100,15 @@ if ($_SESSION["role"] == "Journalist") {
                 <p class="mb-0">@mdbootstrap</p>
               </li>
               <li class="list-group-item d-flex justify-content-between align-items-center p-3">
-                <i class="fab fa-instagram fa-lg" style="color: #ac2bac;"></i>
-                <p class="mb-0">mdbootstrap</p>
+              <i class="fab fa-twitter fa-lg" style="color: #55acee;"></i>
+                <p class="mb-0">@mdbootstrap</p>
               </li>
-              <li class="list-group-item d-flex justify-content-between align-items-center p-3">
-                <i class="fab fa-facebook-f fa-lg" style="color: #3b5998;"></i>
-                <p class="mb-0">mdbootstrap</p>
+              <li class="list-group-item d-flex justify-content-between align-items-right p-3">
+              <form  method="post">
+              <button type="submit" name = "logout" class="btn btn-warning log_out_btn"  onclick = "window.location.href = 'login.php';"> Log out</button>
+              </form>
               </li>
+
             </ul>
           </div>
         </div>

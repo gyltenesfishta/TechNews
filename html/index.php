@@ -25,9 +25,7 @@ if(isset($_SESSION['username'])){
 <header>
     <nav class="navbar navbar-expand-lg navbar-dark p-3 bg-primary" id="headerNav">
       <div class="container-fluid">
-        <form  method="post">
-      <button type="submit" name = "logout" class="btn btn-warning"  onclick = "window.location.href = 'login.php';"> Log out</button>
-      </form>
+
         <a class="navbar-brand d-block d-lg-none" href="#">
           <img src="/static_files/images/logos/logo_2_white.png" height="80" />
         </a>
