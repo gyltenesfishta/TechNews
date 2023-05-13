@@ -1,0 +1,127 @@
+body{
+    background-color: black;
+}
+.nav-item{
+    font-size: 25px;
+    
+}
+.nav-link{
+    color: white;
+}
+.nav-link:hover{
+    color: black;
+
+}
+.navbar-brand{
+    font-size: 25px;
+}
+.logo{
+    padding: 5px;
+    margin-top: -5px;
+}
+.dropdown-menu{
+    background-color:dodgerblue;
+    height: 118px; 
+}
+.dropdown-item{
+    margin-top: -10px;
+    font-size: 25px;
+    padding: 0;
+    text-align: center;
+    margin-top: 5px;
+    color: white;
+    height: 50px;
+}
+.dropdown-item:hover{
+    background-color: black;
+    color: white;
+    
+}
+
+
+.navbar{
+    height: 70px;
+}
+
+li{
+    margin-top: 5px;
+}
+.logo{
+    
+    
+    padding: 5px;
+    margin-top: -5px;
+}
+
+.kopertina{
+    margin-top: -2%;
+    margin-left: 36.9%;
+}
+
+.tekstiNeBalline{
+    position: absolute;
+    font-size: 75px;
+    color: black;
+}
+
+.intel{
+    width: 100%;
+    height: 550px;
+    position: relative;
+}
+.amd{
+    width: 100%;
+    height: 550px;
+}
+.nvidia {
+    width: 100%;
+    height: 550px;
+}
+
+.subscribe{
+
+    padding-left: 2%;
+    padding-right: 2%;
+    margin-top: -9%;
+    padding-bottom: 2%;
+}
+
+
+.submit_button{
+padding-top: 0.5%;
+}
+#submit{
+    border-radius: 10px;
+    color: red;
+    font-weight: bold;
+}
+a:hover{
+    color: black;
+}
+.header-container-search{
+    position: relative;
+}
+
+
+.emailText,.passwordText{
+    border-radius: 8px;
+}
+a{
+    text-decoration: none;
+}
+
+.blue{
+    width: 100%;
+}
+.btn{
+    margin-top: 0;
+    margin-right: 150px;
+    
+}
+#fllw_btn{
+    margin-left: 250px;
+}
+#msg_btn{
+    position: absolute;
+    margin-left: 20px;
+}

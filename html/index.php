@@ -1,5 +1,10 @@
 <?php
 session_start(); // Start the session
+if(isset($_SESSION['username'])){
+  if($_SESSION['role'] == "Journalist"){
+    $_SESSION['nav-item'] = "Shto";
+  }
+}
 
 ?>
 
@@ -171,13 +176,6 @@ session_start(); // Start the session
       </div>
       <!-- Copyright -->
     </footer>
-                  <script>
-                    $(document).ready(function() {
-                  $("#submit").click(function() {
-                    alert("You successfully signed up!");
-                  });
-                });
-                  </script>
  <script src="../js/index.js">
     
   </script>
