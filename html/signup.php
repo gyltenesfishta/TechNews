@@ -60,6 +60,7 @@
     <input type="password" class="form-control" name ="confirm_password" id="password">
   </div>
   <button type="submit" class="btn btn-primary">Sign up</button>
+  <p class="text-center mt-2">Not registered? <a href="login.php">Login</a></p>
 </form>
     </div>
 </body>

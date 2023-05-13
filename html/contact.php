@@ -1,9 +1,5 @@
 <?php
 session_start();
-if ($_SESSION["role"] == "Journalist") {
-    $_SESSION["nav_item"] = "Publiko";
-}
-
 ?>
 
 <!DOCTYPE html>
@@ -54,13 +50,11 @@ if ($_SESSION["role"] == "Journalist") {
               <a class="nav-link mx-2 dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
   
                 Më shumë
-              </a><?php if($_SESSION['role'] == "Journalist") { ?>
+              </a>
               <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" style="height: 190px">
                 <li><a class="dropdown-item" href="historiku.php">Arkiva</a></li>
                 <li><a class="dropdown-item" href="marketing.php">Marketing</a></li>
-                <li><a class="dropdown-item" href="#"><?php echo $_SESSION["nav_item"]?></a></li>
-                <?php } ?>
-
+                <li><a class="dropdown-item" href="#"></a></li>
               </ul>
             </li>
           </ul>

@@ -1,8 +1,4 @@
 <?php
-session_start();
-if ($_SESSION["role"] == "Journalist") {
-    $_SESSION["nav_item"] = "Publiko";
-}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -65,7 +61,7 @@ if ($_SESSION["role"] == "Journalist") {
           </ul>
         </div>
       </div>
-      <img class="rounded-circle" alt="avatar1" src="../images/male-pfp.png" style="width: 50px;"/>
+      <img class="rounded-circle" alt="avatar1" src="../images/male-pfp.png" style="width: 50px;margin-right: 20px;"/>
 
     </nav>
   </header>
