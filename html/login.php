@@ -1,36 +1,3 @@
-<?php
-if($_SERVER["REQUEST_METHOD"] ==="POST"){
-  $mysqli = require_once __DIR__ . "/../html/db_conn.php";
-  $role = $mysqli->real_escape_string($_POST['role']);
-  echo "Role selected: ".$role."<br>";
-  $sql = sprintf("SELECT * FROM users WHERE username = '%s' AND role = '%s'",
-                  $mysqli->real_escape_string($_POST['username']),
-                  $role
-                  );
-  $result = $mysqli->query($sql);
-  $user = $result->fetch_assoc();
-  if($user){
-    if(password_verify($_POST["password"], $user["password"]) && $role == $user["role"]){
-      session_start();
-      // save user data in session variables
-      $_SESSION["user_id"] = $user["id"];
-      $_SESSION["username"] = $user["username"];
-      $_SESSION["role"] = $user["role"];
-      $_SESSION["name"] = $user["firstname"];
-      $_SESSION["lastname"] = $user["lastname"];
-      $_SESSION["email"] = $user["email"];
-
-
-      
-      header("Location: index.php");
-      exit;
-    }else{
-      header("Location: login.php?error=Invalid username or password");
-      exit;
-    }
-  }
-}
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -43,7 +10,7 @@ if($_SERVER["REQUEST_METHOD"] ==="POST"){
 </head>
 <body>
     <div class = "container d-flex justify-content-center align-items-center" style="min-height: 100vh;">
-<form class = "border shadow p-3 rounded" style="width: 450px;" method="post">
+<form class = "border shadow p-3 rounded" style="width: 450px;" action="login-check.php" method="post">
   <h1 class = "text-center p-1">Login</h1>
   <?php if (isset($_GET['error'])){ ?>
     <div class="alert alert-danger" role="alert">

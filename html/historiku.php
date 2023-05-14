@@ -1,5 +1,15 @@
 <?php
 session_start();
+if (isset($_POST["login"])) {
+  header("Location: login.php");
+  exit();
+}
+
+if (isset($_POST["signup"])) {
+  header("Location: signup.php");
+  exit();
+}
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -140,9 +150,16 @@ canvas{
 <header>
     <nav class="navbar navbar-expand-lg navbar-dark p-3 bg-primary" id="headerNav">
       <div class="container-fluid">
-      <button type="submit" class="btn btn-warning" style="position: absolute;"
-    onclick = "window.location.href = 'login.php';"> Log out
-    </button>
+      <?php 
+if (!isset($_SESSION["user_id"])) {
+    echo '<form method="post">
+    <button type="submit" name="login" class="btn btn-warning" style = "position: relative; margin-top: -1px; margin-left: 5px;" onclick="window.location.href = \'login.php\';">Login</button>
+    </form>';
+          echo '<form method="post">
+          <button type="submit" name="signup" class="btn btn-warning" style = "position: absolute; margin-left: 5px; margin-top: -18px;" onclick="window.location.href = \'signup.php\';">Sign up</button>
+          </form>';
+}
+?>
         <a class="navbar-brand d-block d-lg-none" href="#">
           <img src="/static_files/images/logos/logo_2_white.png" height="80" />
         </a>
@@ -180,8 +197,13 @@ canvas{
           </ul>
         </div>
       </div>
-      <img class="rounded-circle" alt="avatar1" src="../images/male-pfp.png" style="width: 50px;margin-right: 20px;"/>
-
+      <?php if(isset($_SESSION["user_id"]) && $_SESSION["user_id"] == 1){ 
+      echo '<img class="rounded-circle" alt="avatar1" src="../images/male-pfp.png" style="width: 50px; margin-right: 20px; cursor: hand;margin-right: 20px;" onclick="window.location.href=\'../ceo/index.php\'">';
+      } else if(isset($_SESSION["user_id"])){
+        echo '<img class="rounded-circle" alt="avatar1" src="../images/male-pfp.png" style="width: 50px; margin-right: 20px; cursor: hand;margin-right: 20px;" onclick="window.location.href=\'profile.php\'">';
+      } 
+      else{
+      } ?>
     </nav>
   </header>
     

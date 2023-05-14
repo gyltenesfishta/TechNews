@@ -1,8 +1,20 @@
 <?php
 session_start();
+if((isset($_SESSION['user_id']))){
 if ($_SESSION["role"] == "Journalist") {
-    $_SESSION["nav_item"] = "Publiko";
+    $_SESSION["nav_item"] = "Shto";
 }
+}
+if(isset($_POST['logout'])) { 
+    session_destroy(); 
+    header("Location: index.php"); 
+    exit();
+}
+if(isset($_POST['change_pw'])) {  
+  header("Location: changePw.php"); 
+  exit();
+}
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -12,18 +24,7 @@ if ($_SESSION["role"] == "Journalist") {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="profile.css" rel="stylesheet">
-    <script >
-    $(document).ready(function() {
-    $(navbarDropdownMenuLink).ready(function() {
-        $('.dropdown-toggle').dropdown()
-      });
-  });
-    
-    
-</script>
-
-
+    <link href="../css/profile.css" rel="stylesheet">
     <title>Document</title>
 </head>
 <body>
@@ -38,7 +39,7 @@ if ($_SESSION["role"] == "Journalist") {
           <span class="navbar-toggler-icon"></span>
         </button>
         
-        <div class=" collapse navbar-collapse" id="navbarNavDropdown" style = "margin-left: -230px;">
+        <div class=" collapse navbar-collapse" id="navbarNavDropdown" style = "">
           <ul class="navbar-nav mx-auto">
             <li class="nav-item">
               <a class="nav-link mx-2" aria-current="page" href="index.php">Ballina</a>
@@ -68,8 +69,10 @@ if ($_SESSION["role"] == "Journalist") {
           </ul>
         </div>
       </div>
-      <img class="rounded-circle" alt="avatar1" src="../images/male-pfp.png" style="width: 50px; margin-right: 20px; cursor: hand;margin-right: 20px;" onclick = "window.location.href = 'profile.php'">
-
+      <?php if(isset($_SESSION["user_id"])){ 
+echo '<img class="rounded-circle" alt="avatar1" src="../images/male-pfp.png" style="width: 50px; margin-right: 20px; cursor: hand;margin-right: 20px;" onclick="window.location.href=\'profile.php\'">';
+      } else{
+      } ?>
     </nav>
 </header>
 <section style="background-color: #eee;">
@@ -79,12 +82,12 @@ if ($_SESSION["role"] == "Journalist") {
           <div class="card-body text-center">
             <img src="../images/male-pfp.png" alt="avatar"
               class="rounded-circle img-fluid" style="width: 150px;">
-            <h5 class="my-3"><?php echo $_SESSION["name"] . " " . $_SESSION["lastname"]; ?></h5> 
+            <h5 class="my-3"><?php echo $_SESSION["firstname"] . " " . $_SESSION["lastname"]; ?></h5> 
             <p class="text-muted mb-1"><?php echo $_SESSION["role"]; ?></p>
 
           </div>
         </div>
-        <div class="card mb-4 mb-lg-0">
+        <div class="card mb-2 mb-lg-">
           <div class="card-body p-0">
             <ul class="list-group list-group-flush rounded-3">
               <li class="list-group-item d-flex justify-content-between align-items-center p-3">
@@ -103,7 +106,7 @@ if ($_SESSION["role"] == "Journalist") {
               <i class="fab fa-twitter fa-lg" style="color: #55acee;"></i>
                 <p class="mb-0">@mdbootstrap</p>
               </li>
-              <li class="list-group-item d-flex justify-content-between align-items-right p-3">
+              <li class="list-group-item d-flex justify-content-between align-items-right ">
               <form  method="post">
               <button type="submit" name = "logout" class="btn btn-warning log_out_btn"  onclick = "window.location.href = 'login.php';"> Log out</button>
               </form>
@@ -121,7 +124,7 @@ if ($_SESSION["role"] == "Journalist") {
                 <p class="mb-0">Full Name</p>
               </div>
               <div class="col-sm-9">
-                <p class="text-muted mb-0"><?php echo $_SESSION["name"] . " " . $_SESSION["lastname"]; ?></p>
+                <p class="text-muted mb-0"><?php echo $_SESSION["firstname"] . " " . $_SESSION["lastname"]; ?></p>
               </div>
             </div>
             <hr>
@@ -138,19 +141,24 @@ if ($_SESSION["role"] == "Journalist") {
               <div class="col-sm-3">
                 <p class="mb-0">Phone</p>
               </div>
+              <?php if($_SESSION["username"] == "oltiademi"){ ?>
+ 
               <div class="col-sm-9">
-                <p class="text-muted mb-0">(097) 234-5678</p>
+                <p class="text-muted mb-0">(048) 804 494</p>
               </div>
             </div>
             <hr>
             <div class="row">
               <div class="col-sm-3">
-                <p class="mb-0">Mobile</p>
+                <p class="mb-0">Password</p>
               </div>
               <div class="col-sm-9">
-                <p class="text-muted mb-0">(098) 765-4321</p>
+              <form  method="post">
+              <button type="submit" name = "change_pw" class="btn btn-warning change_pw" > Change password</button>
+              </form>
               </div>
             </div>
+            <?php } ?>
             <hr>
           </div>
         </div>
@@ -211,6 +219,6 @@ if ($_SESSION["role"] == "Journalist") {
     </div>
   </div>
 </section>
-
+        <script src="..js/profile.js"></script>
 </body>
 </html>
