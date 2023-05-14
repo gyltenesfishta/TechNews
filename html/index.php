@@ -1,10 +1,20 @@
 <?php
 session_start(); // Start the session
-if(isset($_SESSION['username'])){
+if(isset($_SESSION['user_id'])){
   if($_SESSION['role'] == "Journalist"){
     $_SESSION['nav-item'] = "Shto";
   }
 }
+if (isset($_POST["login"])) {
+  header("Location: login.php");
+  exit();
+}
+
+if (isset($_POST["signup"])) {
+  header("Location: signup.php");
+  exit();
+}
+
 
 ?>
 
@@ -25,7 +35,16 @@ if(isset($_SESSION['username'])){
 <header>
     <nav class="navbar navbar-expand-lg navbar-dark p-3 bg-primary" id="headerNav">
       <div class="container-fluid">
-
+      <?php 
+if (!isset($_SESSION["user_id"])) {
+    echo '<form method="post">
+              <button type="submit" name="login" class="btn btn-warning" onclick="window.location.href = \'login.php\';">Login</button>
+          </form>';
+          echo '<form method="post">
+              <button type="submit" name="signup" class="btn btn-warning" onclick="window.location.href = \'signup.php\';">Sign up</button>
+          </form>';
+}
+?>
         <a class="navbar-brand d-block d-lg-none" href="#">
           <img src="/static_files/images/logos/logo_2_white.png" height="80" />
         </a>
@@ -33,7 +52,7 @@ if(isset($_SESSION['username'])){
           <span class="navbar-toggler-icon"></span>
         </button>
         
-        <div class=" collapse navbar-collapse" id="navbarNavDropdown" style = "margin-left: -230px;">
+        <div class=" collapse navbar-collapse" id="navbarNavDropdown" style = "">
           <ul class="navbar-nav mx-auto">
             <li class="nav-item">
               <a class="nav-link mx-2" aria-current="page" href="index.php">Ballina</a>
@@ -54,7 +73,7 @@ if(isset($_SESSION['username'])){
               <a class="nav-link mx-2 dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 Më shumë
               </a>
-              <?php if (isset($_SESSION['username'])) { ?>
+              <?php if (isset($_SESSION['user_id'])) { ?>
               <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" style = "height: 190px;">
                 <li><a class="dropdown-item" href="historiku.php">Arkiva</a></li>
                 <li><a class="dropdown-item" href="marketing.php">Marketing</a></li>
@@ -69,8 +88,13 @@ if(isset($_SESSION['username'])){
           </ul>
         </div>
       </div>
-      <img class="rounded-circle" alt="avatar1" src="../images/male-pfp.png" style="width: 50px; margin-right: 20px; cursor: hand;margin-right: 20px;" onclick = "window.location.href = 'profile.php'">
-
+      <?php if(isset($_SESSION["user_id"]) && $_SESSION["user_id"] == 1){ 
+echo '<img class="rounded-circle" alt="avatar1" src="../images/male-pfp.png" style="width: 50px; margin-right: 20px; cursor: hand;margin-right: 20px;" onclick="window.location.href=\'../ceo/index.php\'">';
+      } else if(isset($_SESSION["user_id"])){
+        echo '<img class="rounded-circle" alt="avatar1" src="../images/male-pfp.png" style="width: 50px; margin-right: 20px; cursor: hand;margin-right: 20px;" onclick="window.location.href=\'profile.php\'">';
+      } 
+      else{
+      } ?>
     </nav>
 </header>
     <span>

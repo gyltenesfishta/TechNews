@@ -16,19 +16,30 @@ if($_SERVER["REQUEST_METHOD"] ==="POST"){
       $_SESSION["user_id"] = $user["id"];
       $_SESSION["username"] = $user["username"];
       $_SESSION["role"] = $user["role"];
-      $_SESSION["name"] = $user["firstname"];
+      $_SESSION["firstname"] = $user["firstname"];
       $_SESSION["lastname"] = $user["lastname"];
       $_SESSION["email"] = $user["email"];
 
-
-      
       header("Location: index.php");
       exit;
     }else{
       header("Location: login.php?error=Invalid username or password");
       exit;
     }
+    if($user["firstname"] == "leutrim"){
+      session_start();
+      $_SESSION["user_id"] = $user["id"];
+        $_SESSION["username"] = $user["username"];
+        $_SESSION["role"] = $user["role"];
+        $_SESSION["firstname"] = $user["firstname"];
+        $_SESSION["lastname"] = $user["lastname"];
+        $_SESSION["email"] = $user["email"];
+        
+        header("Location: ../ceo/index.php");
+        exit;
+    }
   }
+  
 }
 ?>
 <!DOCTYPE html>
