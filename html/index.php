@@ -58,11 +58,13 @@ if(isset($_SESSION['username'])){
               <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" style = "height: 190px;">
                 <li><a class="dropdown-item" href="historiku.php">Arkiva</a></li>
                 <li><a class="dropdown-item" href="marketing.php">Marketing</a></li>
+                <li><a class="dropdown-item" href="faq.php">FAQ</a></li>
                 <li><a class="dropdown-item" href="#"><?php echo $_SESSION['nav-item']; ?></a></li>
                 <?php } else{ ?>
                   <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" style = "height: 130px;">
                 <li><a class="dropdown-item" href="historiku.php">Arkiva</a></li>
                 <li><a class="dropdown-item" href="marketing.php">Marketing</a></li>
+                <li><a class="dropdown-item" href="faq.php">FAQ</a></li>
                 <?php } ?>
               </ul>
             </li>
