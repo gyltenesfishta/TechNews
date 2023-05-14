@@ -212,7 +212,7 @@ echo '<img class="rounded-circle" alt="avatar1" src="../images/male-pfp.png" sty
                                         <div class="col mr-2">
                                             <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
                                                 Publikimet totale</div>
-                                            <div class="h5 mb-0 font-weight-bold text-gray-800">1200</div>
+                                            <div class="h5 mb-0 font-weight-bold text-gray-800">120</div>
                                         </div>
                                         <div class="col-auto">
                                             <i class="fas fa-calendar fa-2x text-gray-300"></i>
@@ -230,7 +230,7 @@ echo '<img class="rounded-circle" alt="avatar1" src="../images/male-pfp.png" sty
                                         <div class="col mr-2">
                                             <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
                                                 Publikimet këtë muaj</div>
-                                            <div class="h5 mb-0 font-weight-bold text-gray-800">50</div>
+                                            <div class="h5 mb-0 font-weight-bold text-gray-800">18</div>
                                         </div>
                                         <div class="col-auto">
                                             <i class="fas fa-calendar fa-2x text-gray-300"></i>
@@ -250,7 +250,7 @@ echo '<img class="rounded-circle" alt="avatar1" src="../images/male-pfp.png" sty
                                             </div>
                                             <div class="row no-gutters align-items-center">
                                                 <div class="col-auto">
-                                                    <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">50$</div>
+                                                    <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">780$</div>
                                                 </div>
                                                 
                                             </div>
@@ -270,8 +270,8 @@ echo '<img class="rounded-circle" alt="avatar1" src="../images/male-pfp.png" sty
                                     <div class="row no-gutters align-items-center">
                                         <div class="col mr-2">
                                             <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">
-                                                Të ardhurat mujore</div>
-                                            <div class="h5 mb-0 font-weight-bold text-gray-800">50$</div>
+                                                Të ardhurat mesatare mujore</div>
+                                            <div class="h5 mb-0 font-weight-bold text-gray-800">111,42$</div>
                                         </div>
                                         <div class="col-auto">
                                             <i class="fas fa-dollar-sign fa-2x text-gray-300"></i>
