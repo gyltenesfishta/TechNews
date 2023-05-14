@@ -14,11 +14,7 @@ if (isset($_POST["signup"])) {
   header("Location: signup.php");
   exit();
 }
-
-
 ?>
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>

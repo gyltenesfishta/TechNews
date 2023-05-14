@@ -8,7 +8,11 @@ if ($_SESSION["role"] == "Journalist") {
 if(isset($_POST['logout'])) { 
     session_destroy(); 
     header("Location: index.php"); 
-    exit(); 
+    exit();
+}
+if(isset($_POST['change_pw'])) {  
+  header("Location: changePw.php"); 
+  exit();
 }
 
 ?>
@@ -137,19 +141,21 @@ echo '<img class="rounded-circle" alt="avatar1" src="../images/male-pfp.png" sty
               <div class="col-sm-3">
                 <p class="mb-0">Phone</p>
               </div>
-              <?php if(!(isset($_SESSION["user_id"]))){ ?>
+              <?php if($_SESSION["username"] == "oltiademi"){ ?>
  
               <div class="col-sm-9">
-                <p class="text-muted mb-0"></p>
+                <p class="text-muted mb-0">(048) 804 494</p>
               </div>
             </div>
             <hr>
             <div class="row">
               <div class="col-sm-3">
-                <p class="mb-0">Mobile</p>
+                <p class="mb-0">Password</p>
               </div>
               <div class="col-sm-9">
-                <p class="text-muted mb-0"></p>
+              <form  method="post">
+              <button type="submit" name = "change_pw" class="btn btn-warning change_pw" > Change password</button>
+              </form>
               </div>
             </div>
             <?php } ?>
@@ -213,6 +219,6 @@ echo '<img class="rounded-circle" alt="avatar1" src="../images/male-pfp.png" sty
     </div>
   </div>
 </section>
-
+        <script src="..js/profile.js"></script>
 </body>
 </html>

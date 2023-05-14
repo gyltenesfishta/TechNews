@@ -36,8 +36,13 @@ if (isset($_POST['username']) && isset($_POST['password']) && isset($_POST['role
     } else if ($password !== $confirm_password) {
         header("Location: signup.php?error=Passwords do not match");
     } else {
-        $hashed_password = password_hash($password, PASSWORD_DEFAULT);
-        $sql = "INSERT INTO users (firstname, lastname, role, email, username, password) VALUES('$firstname', '$lastname', '$role', '$email', '$username', '$hashed_password')";
+        $salt = bin2hex(random_bytes(16));
+
+    // Hash the password with the salt
+    $hashed_password = hash('sha256', $salt . $password);
+
+    $sql = "INSERT INTO users (firstname, lastname, role, email, username, salt, hashed_password) 
+            VALUES ('$firstname', '$lastname', '$role', '$email', '$username', '$salt', '$hashed_password')";
         $result = mysqli_query($conn, $sql);
         if ($result) {
             echo "Success";
