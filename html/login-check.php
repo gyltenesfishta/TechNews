@@ -37,7 +37,8 @@
 
                 header("Location: index.php");
                 exit;
-                if($user["firstname"] == "leutrim"){
+                
+            if($row["email"] == "leutrimhajdini63@gmail.com"){ 
                     session_start();
                     $_SESSION["user_id"] = $user["id"];
                       $_SESSION["username"] = $user["username"];

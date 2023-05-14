@@ -87,9 +87,20 @@ a{
     width: 100%;
 }
 .btn{
-    margin-top: 330px;
-    margin-left: 30px;
-    white-space: nowrap;
-    width: 150px;
-    height: 50px;
+    margin-top: 0;
+    margin-right: 150px;
+    
+}
+#fllw_btn{
+    margin-left: 250px;
+}
+#msg_btn{
+    position: absolute;
+    margin-left: 20px;
+}
+
+
+.log_out_btn{
+    margin-left: 380px;
+    white-space: nowrap;  
 }

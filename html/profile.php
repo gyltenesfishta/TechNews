@@ -141,7 +141,6 @@ echo '<img class="rounded-circle" alt="avatar1" src="../images/male-pfp.png" sty
               <div class="col-sm-3">
                 <p class="mb-0">Phone</p>
               </div>
-              <?php if($_SESSION["username"] == "oltiademi"){ ?>
  
               <div class="col-sm-9">
                 <p class="text-muted mb-0">(048) 804 494</p>
@@ -153,12 +152,12 @@ echo '<img class="rounded-circle" alt="avatar1" src="../images/male-pfp.png" sty
                 <p class="mb-0">Password</p>
               </div>
               <div class="col-sm-9">
-              <form  method="post">
-              <button type="submit" name = "change_pw" class="btn btn-warning change_pw" > Change password</button>
+              <form method="post">
+              <button type="submit" name = "change_pw" class="btn btn-warning change_pw"> Change password</button>
               </form>
               </div>
             </div>
-            <?php } ?>
+            
             <hr>
           </div>
         </div>

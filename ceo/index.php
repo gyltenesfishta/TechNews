@@ -6,10 +6,14 @@ if ($_SESSION["role"] == "Journalist") {
 }
 }
 if(isset($_POST['logout'])) { 
-    session_destroy(); 
+    session_destroy();
     header("Location: ../html/index.php"); 
     exit(); 
 }
+if(isset($_POST['change_pw'])) {  
+    header("Location: changePww.php"); 
+    exit();
+  }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -22,7 +26,7 @@ if(isset($_POST['logout'])) {
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title> Dashboard</title>
+    <title> Dashboard</title> 
     <link href="css/index.css" rel="stylesheet">
     <!-- Custom fonts for this template-->
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -40,14 +44,14 @@ if(isset($_POST['logout'])) {
 <header>
     <nav class="navbar navbar-expand-lg navbar-dark p-3 bg-primary" id="headerNav">
       <div class="container-fluid">
-        <a class="navbar-brand d-block d-lg-none" href="#">
-          <img src="/static_files/images/logos/logo_2_white.png" height="80" />
-        </a>
+            <a class="navbar-brand d-block d-lg-none" href="../html/index.php">
+            <img src="../images/logos/logo_2_white.png" height="80" />
+            </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         
-        <div class=" collapse navbar-collapse" id="navbarNavDropdown" style = "">
+        <div class=" collapse navbar-collapse" id="navbarNavDropdown">
           <ul class="navbar-nav mx-auto">
             <li class="nav-item">
               <a class="nav-link mx-2" aria-current="page" href="../html/index.php" style ="color: white;">Ballina</a>
@@ -136,9 +140,14 @@ echo '<img class="rounded-circle" alt="avatar1" src="../images/male-pfp.png" sty
             <div class="text-center d-none d-md-inline">
                 <button class="rounded-circle border-0" id="sidebarToggle"></button>
             </div>
+            <div class="col-sm-0.1" style="margin-bottom: -99%;">
             <form  method="post">
+            <button type="submit" name = "change_pw" class="btn btn-danger change_pw" > Change password</button>
+            </form>   
+            </div>
+            <form  method="post" style="margin-top:-45%">
               <button type="submit" name = "logout" class="btn btn-warning log_out_btn"  onclick = "window.location.href = 'login.php';"> Log out</button>
-              </form>
+            </form>
 
            
 
@@ -212,7 +221,7 @@ echo '<img class="rounded-circle" alt="avatar1" src="../images/male-pfp.png" sty
                                         <div class="col mr-2">
                                             <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
                                                 Publikimet totale</div>
-                                            <div class="h5 mb-0 font-weight-bold text-gray-800">120</div>
+                                            <div class="h5 mb-0 font-weight-bold text-gray-800">3965</div>
                                         </div>
                                         <div class="col-auto">
                                             <i class="fas fa-calendar fa-2x text-gray-300"></i>
@@ -230,7 +239,7 @@ echo '<img class="rounded-circle" alt="avatar1" src="../images/male-pfp.png" sty
                                         <div class="col mr-2">
                                             <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
                                                 Publikimet këtë muaj</div>
-                                            <div class="h5 mb-0 font-weight-bold text-gray-800">18</div>
+                                            <div class="h5 mb-0 font-weight-bold text-gray-800">950</div>
                                         </div>
                                         <div class="col-auto">
                                             <i class="fas fa-calendar fa-2x text-gray-300"></i>
@@ -250,7 +259,7 @@ echo '<img class="rounded-circle" alt="avatar1" src="../images/male-pfp.png" sty
                                             </div>
                                             <div class="row no-gutters align-items-center">
                                                 <div class="col-auto">
-                                                    <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">780$</div>
+                                                    <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">33000€</div>
                                                 </div>
                                                 
                                             </div>
@@ -271,7 +280,7 @@ echo '<img class="rounded-circle" alt="avatar1" src="../images/male-pfp.png" sty
                                         <div class="col mr-2">
                                             <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">
                                                 Të ardhurat mesatare mujore</div>
-                                            <div class="h5 mb-0 font-weight-bold text-gray-800">111,42$</div>
+                                            <div class="h5 mb-0 font-weight-bold text-gray-800">3000€</div>
                                         </div>
                                         <div class="col-auto">
                                             <i class="fas fa-dollar-sign fa-2x text-gray-300"></i>
@@ -292,7 +301,7 @@ echo '<img class="rounded-circle" alt="avatar1" src="../images/male-pfp.png" sty
                                 <!-- Card Header - Dropdown -->
                                 <div
                                     class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                                    <h6 class="m-0 font-weight-bold text-primary">Të punësuarit</h6>
+                                    <h6 class="m-0 font-weight-bold text-primary">Të ardhurat totale</h6>
                                     
                                 </div>
                                 <!-- Card Body -->
@@ -310,7 +319,7 @@ echo '<img class="rounded-circle" alt="avatar1" src="../images/male-pfp.png" sty
                                 <!-- Card Header - Dropdown -->
                                 <div
                                     class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                                    <h6 class="m-0 font-weight-bold text-primary">Gjinia</h6>
+                                    <h6 class="m-0 font-weight-bold text-primary">Gjinia e të punësuarve</h6>
                                     
                                 </div>
                                 <!-- Card Body -->

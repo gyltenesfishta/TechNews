@@ -1,5 +1,8 @@
 <?php
 session_start();
+if ($_SESSION['role'] == "Journalist"){
+  $_SESSION['nav-item'] = "Shto";
+}
 ?>
 
 <!DOCTYPE html>
@@ -7,7 +10,6 @@ session_start();
 <head>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
    <link rel="stylesheet" href="faq.css">
-   <
    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <meta charset="UTF-8">
@@ -47,14 +49,14 @@ session_start();
               <a class="nav-link mx-2 dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 Më shumë
               </a>
-              <?php if (isset($_SESSION['username'])) { ?>
-              <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" style = "height: 190px;">
+              <?php if ($_SESSION['role'] == "Journalist") { ?>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" style = "height: 240px;">
                 <li><a class="dropdown-item" href="historiku.php">Arkiva</a></li>
                 <li><a class="dropdown-item" href="marketing.php">Marketing</a></li>
                 <li><a class="dropdown-item" href="faq.php">FAQ</a></li>
                 <li><a class="dropdown-item" href="#"><?php echo $_SESSION['nav-item']; ?></a></li>
                 <?php } else{ ?>
-                  <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" style = "height: 130px;">
+                  <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" style = "height: 185px;">
                 <li><a class="dropdown-item" href="historiku.php">Arkiva</a></li>
                 <li><a class="dropdown-item" href="marketing.php">Marketing</a></li>
                 <li><a class="dropdown-item" href="faq.php">FAQ</a></li>
@@ -63,7 +65,7 @@ session_start();
             </li>
           </ul>
         </div>
-      </div>
+      </div>  
       <img class="rounded-circle" alt="avatar1" src="../images/male-pfp.png" style="width: 50px; margin-right: 20px; cursor: hand;margin-right: 20px;" onclick = "window.location.href = 'profile.php'">
 
     </nav>

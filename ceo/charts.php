@@ -93,7 +93,7 @@ echo '<img class="rounded-circle" alt="avatar1" src="../images/male-pfp.png" sty
         <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
                 <!-- Sidebar - Brand -->
-                <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+                <a class="sidebar-brand d-flex align-items-center justify-content-center" href="../ceo/index.php">
                     
                     <div class="sidebar-brand-text mx-3">Leutrim Hajdini</div>
                 </a>
@@ -266,7 +266,6 @@ echo '<img class="rounded-circle" alt="avatar1" src="../images/male-pfp.png" sty
     <!-- Page level custom scripts -->
     <script src="js/demo/chart-area-demo.js"></script>
     <script src="js/demo/chart-pie-demo.js"></script>
-    <script src="js/demo/chart-bar-demo.js"></script>
 
 </body>
 
