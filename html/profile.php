@@ -1,8 +1,10 @@
   <?php
   session_start();
+  include "../html/db_conn.php";
   if((isset($_SESSION['user_id']))){
   if ($_SESSION["role"] == "Journalist") {
       $_SESSION["nav_item"] = "Shto";
+      
   }
   }
   if(isset($_POST['logout'])) { 
@@ -27,6 +29,21 @@
             }
         </script>";
     }
+    if (isset($_POST['insert_photo'])) {
+      $image = $_FILES['image']['tmp_name'];
+      $image_data = file_get_contents($image);
+      
+      // Establish database connection and insert image data into BLOB column
+      $conn = mysqli_connect('localhost:3307', 'root', '', 'my_db');
+      $stmt = mysqli_prepare($conn,"UPDATE USERS SET image = ? WHERE id = ?");
+      mysqli_stmt_bind_param($stmt, "si", $image_data, $_SESSION['user_id']);
+      mysqli_stmt_execute($stmt);
+      mysqli_stmt_close($stmt);
+      mysqli_close($conn);
+      $_SESSION["image"] = $image_data;
+      
+    }
+    $image = $_SESSION["image"];
 
  ?>
   <!DOCTYPE html>
@@ -86,8 +103,8 @@
           </div>
         </div>
         <?php if(isset($_SESSION["user_id"])){ 
-  echo '<img class="rounded-circle" alt="avatar1" src="../images/male-pfp.png" style="width: 50px; margin-right: 20px; cursor: hand;margin-right: 20px;" onclick="window.location.href=\'profile.php\'">';
-        } else{
+    echo '<img class="rounded-circle" alt="avatar1" src="data:image/jpeg;base64,'.base64_encode($image).'" style="width: 50px; height: 50px; margin-right: 20px; cursor: hand;margin-right: 20px;" onclick="window.location.href=\'profile.php\'">';
+  } else{
         } ?>
       </nav>
   </header>
@@ -96,11 +113,15 @@
         <div class="col-lg-4">
           <div class="card mb-4">
             <div class="card-body text-center">
-              <img src="../images/male-pfp.png" alt="avatar"
-                class="rounded-circle img-fluid" style="width: 150px;">
+            <?php if(isset($_SESSION["user_id"])){ 
+            echo '<img class="rounded-circle" alt="avatar1" src="data:image/jpeg;base64,'.base64_encode($image).'" style="width: 150px; height: 150px" onclick="window.location.href=\'profile.php\'">';
+            } else{
+
+            } ?>
               <h5 class="my-3"><?php echo $_SESSION["firstname"] . " " . $_SESSION["lastname"]; ?></h5> 
-              <form  method="post">
-                <button type="submit" name = "change_user" class="btn btn-success" style="margin-left: 150px; white-space: nowrap;" onclick = "window.location.href = 'change_user.php';">Insert picture</button>
+              <form  method="post" enctype="multipart/form-data">
+                <input type="file" class="custom-file-input" name="image" id="image" style="margin-left: -50px; ">
+                <button type="submit" name = "insert_photo" class="btn btn-success" style="margin-left: 280px;margin-top: -60px; white-space: nowrap;">Shto foton</button>
                 </form>
 
             </div>
@@ -118,18 +139,18 @@
                 </li>
                 <li class="list-group-item d-flex justify-content-between align-items-right ">
                 <form  method="post">
-                <button type="submit" name = "change_user" class="btn btn-success" style="margin-left:100%;white-space: nowrap;" onclick = "window.location.href = 'change_user.php';">Change username</button>
+                <button type="submit" name = "change_user" class="btn btn-success" style="margin-left:90%;white-space: nowrap;" onclick = "window.location.href = 'change_user.php';">Ndrysho përdoruesin</button>
                 </form>
                 </li>
                 <li class="list-group-item d-flex justify-content-between align-items-right ">
                 <form  method="post" action= "../change-info/delete_user.php">
-                <button type="submit" name = "delete_acc" class="btn btn-danger" style="margin-left:325px;white-space: nowrap;"
-                                 onclick="return confirm('Are you sure you want to delete your account? This action cannot be undone.')">Delete account</button>
+                <button type="submit" name = "delete_acc" class="btn btn-danger" style="margin-left:345px;white-space: nowrap;"
+                                 onclick="return confirm('Are you sure you want to delete your account? This action cannot be undone.')">Fshij llogarinë</button>
                 </form>
                 </li>
                 <li class="list-group-item d-flex justify-content-between align-items-right ">
                 <form  method="post">
-                <button type="submit" name = "logout" class="btn btn-warning log_out_btn" style="margin-left:375px;white-space: nowrap; onclick = "window.location.href = '../html/login.php';"> Log out</button>
+                <button type="submit" name = "logout" class="btn btn-warning log_out_btn" style="margin-left:422px;white-space: nowrap; onclick = "window.location.href = 'login.php';"> Dil</button>
                 </form>
                 </li>
               </ul>
@@ -141,7 +162,7 @@
           <div class="card-body">
             <div class="row">
               <div class="col-sm-3">
-                <p class="mb-0">Full Name</p>
+                <p class="mb-0">Emri</p>
               </div>
               <div class="col-sm-9">
                 <p class="text-muted mb-0"><?php echo $_SESSION["firstname"] . " " . $_SESSION["lastname"]; ?></p>
@@ -159,7 +180,7 @@
             <hr>
             <div class="row">
               <div class="col-sm-3">
-                <p class="mb-0">Phone</p>
+                <p class="mb-0">Telefoni</p>
               </div>
  
               <div class="col-sm-9">
@@ -169,12 +190,15 @@
             <hr>
             <div class="row">
               <div class="col-sm-3">
-                <p class="mb-0">Password</p>
+                <p class="mb-0" style="margin-top: 10px;">Fjalëkalimi</p>
               </div>
               <div class="col-sm-9">
               <form method="post">
-              <button type="submit" name = "change_pw" class="btn btn-success change_pw">Change password</button>
-              </form>
+             
+                  
+              <button type="submit" name = "change_pw" class="btn btn-success change_pw">Ndrysho fjalëkalimin</button>
+           
+            </form>
               </div>
             </div>
             

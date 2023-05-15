@@ -162,7 +162,7 @@ echo '<img class="rounded-circle" alt="avatar1" src="../images/male-pfp.png" sty
             <form  method="post">
             <button name = "change_pw" class="btn-danger change_pw" style="           
             display: inline-block;
-            margin-left: 5%;
+            margin-left: 33px;
             margin-right: 2%;
             margin-top: 270px;
             padding: 10px 8px;
@@ -181,7 +181,7 @@ echo '<img class="rounded-circle" alt="avatar1" src="../images/male-pfp.png" sty
             <form  method="post">
             <button type="submit" name = "logout" class="btn btn-warning log_out_btn nav-item"  onclick = "window.location.href = 'login.php';" style="
             display: inline-block;
-            margin-left: 5%;
+            margin-left: 50px;
             margin-top: 20px;
             padding: 10px 15px;
             font-size: 14px;
