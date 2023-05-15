@@ -1,10 +1,15 @@
 <?php
 session_start(); // Start the session
+
 if(isset($_SESSION['user_id'])){
   if($_SESSION['role'] == "Journalist"){
     $_SESSION['nav-item'] = "Shto";
   }
+  else{
+    $_SESSION['nav-item'] = NULL;
+  }
 }
+
 if (isset($_POST["login"])) {
   header("Location: login.php");
   exit();
@@ -19,6 +24,7 @@ if (isset($_POST["signup"])) {
 <html lang="en">
 <head>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js"></script>
    <link rel="stylesheet" href="../css/style.css">
    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
@@ -48,7 +54,7 @@ if (!isset($_SESSION["user_id"])) {
           <span class="navbar-toggler-icon"></span>
         </button>
         
-        <div class=" collapse navbar-collapse" id="navbarNavDropdown" style = "">
+        <div class=" collapse navbar-collapse" id="navbarNavDropdown">
           <ul class="navbar-nav mx-auto">
             <li class="nav-item">
               <a class="nav-link mx-2" aria-current="page" href="index.php">Ballina</a>
@@ -69,18 +75,26 @@ if (!isset($_SESSION["user_id"])) {
               <a class="nav-link mx-2 dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 Më shumë
               </a>
-              <?php if (isset($_SESSION['user_id'])) { ?>
-              <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" style = "height: 190px;">
-                <li><a class="dropdown-item" href="historiku.php">Arkiva</a></li>
-                <li><a class="dropdown-item" href="marketing.php">Marketing</a></li>
-                <li><a class="dropdown-item" href="faq.php">FAQ</a></li>
-                <li><a class="dropdown-item" href="#"><?php echo $_SESSION['nav-item']; ?></a></li>
-                <?php } else{ ?>
-                  <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" style = "height: 130px;">
-                <li><a class="dropdown-item" href="historiku.php">Arkiva</a></li>
-                <li><a class="dropdown-item" href="marketing.php">Marketing</a></li>
-                <li><a class="dropdown-item" href="faq.php">FAQ</a></li>
-                <?php } ?>
+              <?php if (isset($_SESSION['user_id'])) {
+              if ($_SESSION['role'] == "Journalist" || $_SESSION['user_id'] == "1") {
+              echo '<ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" style="color: white; height: 240px;">';
+              echo '<li><a class="dropdown-item" href="../html/historiku.php" style="color: white;">Arkiva</a></li>';
+              echo '<li><a class="dropdown-item" href="../html/marketing.php" style="color: white;">Marketing</a></li>';
+              echo '<li><a class="dropdown-item" href="../html/faq.php" style="color: white;">FAQ</a></li>';
+              echo '<li><a class="dropdown-item shto-item" href="#">Shto lajmin</a></li>';
+              }
+              echo '</ul>';
+            } else  {
+              echo '<ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" style="color: white;">';
+              echo '<li><a class="dropdown-item" href="../html/historiku.php" style="color: white;">Arkiva</a></li>';
+              echo '<li><a class="dropdown-item" href="../html/marketing.php" style="color: white;">Marketing</a></li>';
+              echo '<li><a class="dropdown-item" href="../html/faq.php" style="color: white;">FAQ</a></li>';
+              echo '</ul>';
+            }
+            ?>
+
+
+
               </ul>
             </li>
           </ul>

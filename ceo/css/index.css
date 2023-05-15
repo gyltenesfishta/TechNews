@@ -25,8 +25,8 @@ body{
 }
 .dropdown-menu{
     background-color:dodgerblue;
-    height: 118px; 
-}
+    height: 158px; 
+  }
 .dropdown-item{
     margin-top: -10px;
     font-size: 25px;
@@ -39,7 +39,6 @@ body{
 .dropdown-item:hover{
     background-color: black;
     color: white;
-    
 }
 
 
@@ -105,4 +104,3 @@ a{
     margin-left: 380px;
     white-space: nowrap;  
 }
-  

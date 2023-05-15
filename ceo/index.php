@@ -28,12 +28,14 @@ if(isset($_POST['change_pw'])) {
 
     <title> Dashboard</title> 
     <link href="css/index.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js"></script>
+
     <!-- Custom fonts for this template-->
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    
     <link
         href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
-        rel="stylesheet">
-
+        rel="stylesheet"    >
     <!-- Custom styles for this template-->
     <link href="css/sb-admin-2.min.css" rel="stylesheet">
 
@@ -72,16 +74,32 @@ if(isset($_POST['change_pw'])) {
               <a class="nav-link mx-2 dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false" style ="color: white;">
                 Më shumë
               </a>
-              <?php if (isset($_SESSION['user_id'])) { ?>
-              <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" style = "height: 190px;color: white;">
-                <li><a class="dropdown-item" href="../html/historiku.php">Arkiva</a></li>
-                <li><a class="dropdown-item" href="../html/marketing.php">Marketing</a></li>
-                <li><a class="dropdown-item" href="#"><?php echo $_SESSION['nav-item']; ?></a></li>
-                <?php } else{ ?>
-                  <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" style = "height: 130px;color: white;">
-                <li><a class="dropdown-item" href="../html/historiku.php" style ="color: white;">Arkiva</a></li>
-                <li><a class="dropdown-item" href="../html/marketing.php" style ="color: white;">Marketing</a></li>
-                <?php } ?>
+              <?php if (isset($_SESSION['user_id'])) {
+                  echo '<style>
+                  .dropdown-item:hover {
+                    background-color: black;
+                  }
+                  .dropdown-item{
+                    margin-top: -10px;
+                    font-size: 25px;
+                    padding: 0;
+                    text-align: center;
+                    margin-top: 5px;
+                    color: white;
+                    height: 50px;
+                }
+                </style>';
+                echo '<ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" style="color: white; background-color: dodgerblue; height: 185px;">';
+                echo '<li><a class="dropdown-item" href="../html/historiku.php" style="color: white;">Arkiva</a></li>';
+                echo '<li><a class="dropdown-item" href="../html/marketing.php" style="color: white;">Marketing</a></li>';
+                echo '<li><a class="dropdown-item" href="../html/faq.php" style="color: white;">FAQ</a></li>';            
+                echo '</ul>';
+                }
+                ?>
+
+
+
+
               </ul>
             </li>
           </ul>
@@ -156,7 +174,8 @@ echo '<img class="rounded-circle" alt="avatar1" src="../images/male-pfp.png" sty
             background-color: #FF0000; /* Yellow color */
             color: #111; /* Text color */
             border: none;
-            cursor: pointer;">Change password</button>
+            cursor: pointer;"
+            >Change password</button>
             </form>
             </div>
             <form  method="post">
