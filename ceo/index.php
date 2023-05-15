@@ -140,14 +140,40 @@ echo '<img class="rounded-circle" alt="avatar1" src="../images/male-pfp.png" sty
             <div class="text-center d-none d-md-inline">
                 <button class="rounded-circle border-0" id="sidebarToggle"></button>
             </div>
-            <div class="col-sm-0.1" style="margin-bottom: -99%;">
-            
+            <div class="col-sm-0.1">
             <form  method="post">
-            <button type="submit" name = "change_pw" class="btn btn-danger change_pw" > Change password</button>
+            <button name = "change_pw" class="btn-danger" style="           
+            display: inline-block;
+            margin-left:10%;
+            margin-top: 270px;
+            padding: 10px 20px;
+            font-size: 16px;
+            font-weight: bold;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 4px;
+            background-color: #FF0000; /* Yellow color */
+            color: #111; /* Text color */
+            border: none;
+            cursor: pointer;">Change password</button>
             </form>   
-            
+            </div>
             <form  method="post">
-            <button type="submit" name = "logout" class="btn btn-warning log_out_btn"  onclick = "window.location.href = 'login.php';"> Log out</button>
+            <button type="submit" name = "logout" class="btn btn-warning log_out_btn"  onclick = "window.location.href = 'login.php';" style="
+            display: inline-block;
+            margin-left:10%;
+            margin-top: 20px;
+            padding: 10px 58px;
+            font-size: 16px;
+            font-weight: bold;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 4px;
+            background-color: #f0c14b; /* Yellow color */
+            color: #111; /* Text color */
+            border: none;
+            cursor: pointer;"
+            >Log out</button>
             </form>
     </div>
            
