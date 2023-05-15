@@ -33,7 +33,7 @@ if(isset($_POST['change_pw'])) {
     <link
         href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
         rel="stylesheet">
-
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js"></script>
     <!-- Custom styles for this template-->
     <link href="css/sb-admin-2.min.css" rel="stylesheet">
 
@@ -73,7 +73,7 @@ if(isset($_POST['change_pw'])) {
                 Më shumë
               </a>
               <?php if (isset($_SESSION['user_id'])) { ?>
-              <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" style = "height: 190px;color: white;">
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" style = "height: 190px; color: white;">
                 <li><a class="dropdown-item" href="../html/historiku.php">Arkiva</a></li>
                 <li><a class="dropdown-item" href="../html/marketing.php">Marketing</a></li>
                 <li><a class="dropdown-item" href="#"><?php echo $_SESSION['nav-item']; ?></a></li>
@@ -141,14 +141,15 @@ echo '<img class="rounded-circle" alt="avatar1" src="../images/male-pfp.png" sty
                 <button class="rounded-circle border-0" id="sidebarToggle"></button>
             </div>
             <div class="col-sm-0.1" style="margin-bottom: -99%;">
+            
             <form  method="post">
             <button type="submit" name = "change_pw" class="btn btn-danger change_pw" > Change password</button>
             </form>   
-            </div>
-            <form  method="post" style="margin-top:-45%">
-              <button type="submit" name = "logout" class="btn btn-warning log_out_btn"  onclick = "window.location.href = 'login.php';"> Log out</button>
+            
+            <form  method="post">
+            <button type="submit" name = "logout" class="btn btn-warning log_out_btn"  onclick = "window.location.href = 'login.php';"> Log out</button>
             </form>
-
+    </div>
            
 
         </ul>

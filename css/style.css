@@ -111,3 +111,6 @@ a{
     margin-left: 5px;
     
 }
+.rounded-circle{
+    cursor: pointer;
+}

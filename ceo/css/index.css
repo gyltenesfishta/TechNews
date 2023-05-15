@@ -101,6 +101,7 @@ a{
 
 
 .log_out_btn{
+    width: 100px;
     margin-left: 380px;
     white-space: nowrap;  
 }

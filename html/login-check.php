@@ -38,15 +38,15 @@
                 header("Location: index.php");
                 exit;
                 
-            if($row["email"] == "leutrimhajdini63@gmail.com"){ 
+                if($row["email"] == "leutrimhajdini63@gmail.com"){ 
                     session_start();
-                    $_SESSION["user_id"] = $user["id"];
-                      $_SESSION["username"] = $user["username"];
-                      $_SESSION["role"] = $user["role"];
-                      $_SESSION["firstname"] = $user["firstname"];
-                      $_SESSION["lastname"] = $user["lastname"];
-                      $_SESSION["email"] = $user["email"];
-                      header("Location: ../ceo/index.php");
+                      $_SESSION["user_id"] = $row["id"];
+                      $_SESSION["username"] = $row["username"];
+                      $_SESSION["role"] = $row["role"];
+                      $_SESSION["firstname"] = $row["firstname"];
+                      $_SESSION["lastname"] = $row["lastname"];
+                      $_SESSION["email"] = $row["email"];
+                      header("Location: /../ceo/index.php");
                       exit;
                   }
             } else {

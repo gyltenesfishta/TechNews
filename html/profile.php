@@ -24,6 +24,7 @@ if(isset($_POST['change_pw'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js"></script>
     <link href="../css/profile.css" rel="stylesheet">
     <title>Document</title>
 </head>
@@ -60,9 +61,11 @@ if(isset($_POST['change_pw'])) {
               <a class="nav-link mx-2 dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 Më shumë
               </a>
-                  <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" style = "height: 130px;">
+                  <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" style = "height: 185px;">
                 <li><a class="dropdown-item" href="historiku.php">Arkiva</a></li>
                 <li><a class="dropdown-item" href="marketing.php">Marketing</a></li>
+                <li><a class="dropdown-item" href="faq.php">FAQ</a></li>
+
                
               </ul>
             </li>
@@ -76,7 +79,7 @@ echo '<img class="rounded-circle" alt="avatar1" src="../images/male-pfp.png" sty
     </nav>
 </header>
 <section style="background-color: #eee;">
-    <div class="row">
+    <div class="row justify-content-center">
       <div class="col-lg-4">
         <div class="card mb-4">
           <div class="card-body text-center">
@@ -87,7 +90,7 @@ echo '<img class="rounded-circle" alt="avatar1" src="../images/male-pfp.png" sty
 
           </div>
         </div>
-        <div class="card mb-2 mb-lg-">
+        <div class="card mb-2 mb-lg-5">
           <div class="card-body p-0">
             <ul class="list-group list-group-flush rounded-3">
               <li class="list-group-item d-flex justify-content-between align-items-center p-3">
@@ -111,12 +114,11 @@ echo '<img class="rounded-circle" alt="avatar1" src="../images/male-pfp.png" sty
               <button type="submit" name = "logout" class="btn btn-warning log_out_btn"  onclick = "window.location.href = 'login.php';"> Log out</button>
               </form>
               </li>
-
             </ul>
           </div>
         </div>
       </div>
-      <div class="col-lg-8">
+      <div class="col-lg-7">
         <div class="card mb-4">
           <div class="card-body">
             <div class="row">
