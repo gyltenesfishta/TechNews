@@ -20,7 +20,7 @@
                             <h3 class="mb-0">Change Password</h3>
                         </div>
                         <div class="card-body">
-                            <form class="form" role="form" autocomplete="off" action = "changePw-logic.php" method = "post">
+                            <form class="form" role="form" autocomplete="off" action = "../change-logic/changePw-logic.php" method = "post">
                             <?php if (isset($_GET['error'])){ ?>
                                 <div class="alert alert-danger" role="alert">
                                     <?=$_GET['error']?>

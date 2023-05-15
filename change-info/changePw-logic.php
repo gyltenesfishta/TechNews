@@ -1,6 +1,6 @@
 <?php 
     session_start();
-    include "db_conn.php";
+    include "../html/db_conn.php";
     if (isset($_POST['curr_password']) && isset($_POST['new_password']) && isset($_POST['verify_password'])) {
 
     $curr_password = $_POST['curr_password'];
@@ -8,11 +8,11 @@
     $verify_password = $_POST['verify_password'];
     
     if (empty($curr_password)) {
-        header("Location: changePw.php?error=Password is required");
+        header("Location: ../change-info/changePw.php?error=Password is required");
     }else if (empty($new_password)) {
-        header("Location: changePw.php?error=Password is required");
+        header("Location: ../change-info/changePw.php?error=Password is required");
     }else if (empty($verify_password)) {
-        header("Location: changePw.php?error=Password is required");
+        header("Location: ../change-info/changePw.php?error=Password is required");
     } else {
         $sql = "SELECT * FROM users WHERE id = '{$_SESSION['user_id']}'";
         $result = mysqli_query($conn, $sql);
@@ -24,18 +24,18 @@
             $hashed_password = hash('sha256', $row['salt'] . $new_password);
             $sql = "UPDATE users SET hashed_password = '$hashed_password' where id = '{$_SESSION['user_id']}'";
                 mysqli_query($conn, $sql);
-                header("Location: profile.php");
+                header("Location: ../html/profile.php");
                 exit;
             }
             // Compare the hashed password
         else {
                 // Passwords don't match, show error
-                header("Location: changePw.php?error=Passwords don't match");
+                header("Location: ../change-info/changePw.php?error=Passwords don't match");
                 exit();
             }
         } else {
             // User not found, show error
-            header("Location: changePw.php?error=Password not found");
+            header("Location: ../change-info/changePw.php?error=Password not found");
             exit();
         }
     }
