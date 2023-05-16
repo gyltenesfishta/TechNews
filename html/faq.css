@@ -56,7 +56,7 @@ section{
   overflow-x: hidden;
 }
 a:hover{
-    color: black !important;
+    color: white !important;
 }
 .header-container-search{
     position: relative;
