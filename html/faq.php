@@ -21,7 +21,7 @@ if (isset($_POST["signup"])) {
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   </head>
-  <body style="background-color: #C4AE78;">
+  <body style="background-color: #FFFDD0;">
   <header>
     <nav class="navbar navbar-expand-lg navbar-dark p-3 bg-primary" id="headerNav">
       <div class="container-fluid">
@@ -132,27 +132,30 @@ if (isset($_POST["signup"])) {
 
     <div class="col-md-6 col-lg-4 mb-4">
       <h6 class="mb-3 text-primary">A mund të sugjerojë dhe të dërgojë ndonjë lajm për ju?</h6>
-      <p><strong><u>Unfortunately no</u>.</strong> We do not issue full or partial refunds for any
-        reason.</p>
+      <p>Për momentin jo, por jemi duke punuar për të shtuar një funksion të tillë.</p>
     </div>
 
     <div class="col-md-6 col-lg-3 mb-4">
-      <h6 class="mb-3 text-primary"> Another
-        question that is longer than usual</h6>
+      <h6 class="mb-3 text-primary">A mund të përdor lajmet tuaja nëse dua të bëj ndonjë raport ose publikim për vete?</h6>
       <p>
-        Of course! We’re happy to offer a free plan to anyone who wants to try our service.
+        <strong>Sigurisht!</strong> Vetëm se duhet të cekësh instancën se për çfarë dhe ku do t'i përdorësh.
       </p>
     </div>
     <label class="form-label" for="textAreaExample" style="margin-left: 8%"><strong>Dëshiron të dish më shumë rreth nesh?</strong></label>
     <div class="col-md-10 col-lg-7 mb-4 form-outline" style = "margin-left: -34%;">
-    <form class = "border shadow p-3 rounded" action="faq-logic.php"  method="post">
+    <form class = "border shadow p-3 rounded" style="background-color: #c5b078;"action="faq-logic.php"  method="post">
   <textarea class="form-control" name="pyetja" id="textAreaExample1" rows="4"></textarea>
-  <button type="button" name="pyet" class="btn btn-success" style = "margin-top: 10px;">Pyet</button>
-  <?php if (isset($_GET['error'])){ ?>
-          <div class="alert alert-danger" role="alert">
-              <?=$_GET['error']?>
-              </div>
-              <?php } ?>
+  <input type="submit" name="pyet" class="btn btn-success" style = "margin-top: 10px;"></input>
+  <?php if (isset($_GET['error'])) { ?>
+  <div class="alert alert-danger" role="alert" style="margin-top: 10px;">
+    <?= $_GET['error'] ?>
+  </div>
+<?php } else if (isset($_GET['success'])) { ?>
+  <div class="alert alert-success" role="alert" style="margin-top: 10px;">
+    <?= $_GET['success'] ?>
+  </div>
+<?php } ?>
+
   </from>
 </div>
   </div>

@@ -77,3 +77,17 @@ a{
     margin-left: 5px;
     
 }
+.alert-success {
+    background-color: green;
+    color: white;
+    font-size: 16px;
+    padding: 10px;
+    margin-top: 10px
+  }
+  .alert-danger{
+    background-color: red;
+    color: white;
+    font-size: 16px;
+    padding: 10px;
+    margin-top: 10px
+  }
