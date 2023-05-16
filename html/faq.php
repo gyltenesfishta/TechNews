@@ -1,5 +1,6 @@
 <?php
 session_start();
+include "db_conn.php";
 if (isset($_POST["login"])) {
   header("Location: login.php");
   exit();
@@ -20,7 +21,7 @@ if (isset($_POST["signup"])) {
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   </head>
-  <body>
+  <body style="background-color: #C4AE78;">
   <header>
     <nav class="navbar navbar-expand-lg navbar-dark p-3 bg-primary" id="headerNav">
       <div class="container-fluid">
@@ -78,13 +79,16 @@ if (isset($_POST["signup"])) {
           </ul>
         </div>
       </div>
-      <?php if(isset($_SESSION["user_id"]) && $_SESSION["user_id"] == 1){ 
-echo '<img class="rounded-circle" alt="avatar1" src="../images/male-pfp.png" style="width: 50px; margin-right: 20px; cursor: hand; margin-right: 20px;" onclick="window.location.href=\'../ceo/index.php\'">';
-      } else if(isset($_SESSION["user_id"])){
-        echo '<img class="rounded-circle" alt="avatar1" src="../images/male-pfp.png" style="width: 50px; margin-right: 20px; cursor: hand; margin-right: 20px;" onclick="window.location.href=\'profile.php\'">';
-      } 
-      else{
-      } ?>
+      <?php 
+  if(isset($_SESSION["user_id"]) && $_SESSION["user_id"] == 1){ 
+    echo '<img class="rounded-circle" alt="avatar1" src="data:image/jpeg;base64,' . base64_encode($_SESSION['image']) . '" style="width: 50px; margin-right: 20px; cursor: hand;margin-right: 20px;" onclick="window.location.href=\'../ceo/index.php\'">';
+  } 
+  else if(isset($_SESSION["user_id"])){
+    echo '<img class="rounded-circle" alt="avatar1" src="data:image/jpeg;base64,'.base64_encode($_SESSION['image']).'" style="width: 50px; height: 50px; margin-right: 20px; cursor: hand;margin-right: 20px;" onclick="window.location.href=\'profile.php\'">';
+  } 
+  else{
+  } 
+        ?>
     </nav>
 </header>
     <!--Section: FAQ-->
@@ -120,12 +124,10 @@ echo '<img class="rounded-circle" alt="avatar1" src="../images/male-pfp.png" sty
     </div>
 
     <div class="col-md-6 col-lg-4 mb-4">
-      <h6 class="mb-3 text-primary">A simple
-        question?
-      </h6>
+      <h6 class="mb-3 text-primary">A mund të blejë produkte të teknologjisë nga ju?</h6>
       <p>
-        Yes. Go to the billing section of your dashboard and update your payment information.
-      </p>
+        Jo, për momentin nuk e kemi atë funksion.
+    </p>
     </div>
 
     <div class="col-md-6 col-lg-4 mb-4">
@@ -143,6 +145,18 @@ echo '<img class="rounded-circle" alt="avatar1" src="../images/male-pfp.png" sty
         Of course! We’re happy to offer a free plan to anyone who wants to try our service.
       </p>
     </div>
+    <label class="form-label" for="textAreaExample" style="margin-left: 8%"><strong>Dëshiron të dish më shumë rreth nesh?</strong></label>
+    <div class="col-md-10 col-lg-7 mb-4 form-outline" style = "margin-left: -34%;">
+    <form class = "border shadow p-3 rounded" action="faq-logic.php"  method="post">
+  <textarea class="form-control" name="pyetja" id="textAreaExample1" rows="4"></textarea>
+  <button type="button" name="pyet" class="btn btn-success" style = "margin-top: 10px;">Pyet</button>
+  <?php if (isset($_GET['error'])){ ?>
+          <div class="alert alert-danger" role="alert">
+              <?=$_GET['error']?>
+              </div>
+              <?php } ?>
+  </from>
+</div>
   </div>
 </section>
 <!--Section: FAQ-->
