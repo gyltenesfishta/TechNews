@@ -83,8 +83,7 @@ if (!isset($_SESSION["user_id"])) {
         </div>
       </div>
       <?php if(isset($_SESSION["user_id"]) && $_SESSION["user_id"] == 1){ 
-echo '<img class="rounded-circle" alt="avatar1" src="../images/male-pfp.png" style="width: 50px; margin-right: 20px; cursor: hand;margin-right: 20px;" onclick="window.location.href=\'../ceo/index.php\'">';
-      echo '<a><img class="rounded-circle" alt="avatar1" src="../images/male-pfp.png" style="width: 50px; margin-right: 20px; cursor: hand;margin-right: 20px;" onclick="window.location.href=\'../ceo/index.php\'"></a>';
+      echo '<img class="rounded-circle" alt="avatar1" src="../images/male-pfp.png" style="width: 50px; margin-right: 20px; cursor: hand;margin-right: 20px;" onclick="window.location.href=\'../ceo/index.php\'">';
       } else if(isset($_SESSION["user_id"])){
         echo '<img class="rounded-circle" alt="avatar1" src="../images/male-pfp.png" style="width: 50px; margin-right: 20px; cursor: hand;margin-right: 20px;" onclick="window.location.href=\'profile.php\'">';
       } 
