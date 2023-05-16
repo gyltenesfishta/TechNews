@@ -16,6 +16,10 @@
     header("Location: ../change-info/changePw.php"); 
     exit();
   }
+  if(isset($_POST['change_number'])) {  
+    header("Location: ../change-info/change_number.php"); 
+    exit();
+  }
     if(isset($_POST['change_user'])) {  
       header("Location: ../change-info/change_user.php"); 
       exit();
@@ -59,58 +63,10 @@
       <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js"></script>
       <link href="../css/profile.css" rel="stylesheet">
-      <title>Document</title>
+      <title>Profili</title>
   </head>
   <body>
-  <header>
-      <nav class="navbar navbar-expand-lg navbar-dark p-3 bg-primary" id="headerNav">
-        <div class="container-fluid">
-
-          <a class="navbar-brand d-block d-lg-none" href="#">
-            <img src="/static_files/images/logos/logo_2_white.png" height="80" />
-          </a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          
-          <div class=" collapse navbar-collapse" id="navbarNavDropdown" style = "">
-            <ul class="navbar-nav mx-auto">
-              <li class="nav-item">
-                <a class="nav-link mx-2" aria-current="page" href="index.php">Ballina</a>
-              </li>
-              
-              <li class="nav-item">
-                <a class="nav-link mx-2" href="contact.php">Kontaktet</a>
-              </li>
-              <li class="nav-item d-none d-lg-block">
-                <a class="nav-link mx-2" href="index.php">
-                  <img src="../images/Tech-News.png" height="45px" width="200px" class="logo" />
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link mx-2" href="news.php">Lajmet</a>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link mx-2 dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Më shumë
-                </a>
-                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" style = "height: 185px;">
-                  <li><a class="dropdown-item" href="historiku.php">Arkiva</a></li>
-                  <li><a class="dropdown-item" href="marketing.php">Marketing</a></li>
-                  <li><a class="dropdown-item" href="faq.php">FAQ</a></li>
-
-                
-                </ul>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <?php if(isset($_SESSION["user_id"])){ 
-    echo '<img class="rounded-circle" alt="avatar1" src="data:image/jpeg;base64,'.base64_encode($image).'" style="width: 50px; height: 50px; margin-right: 20px; cursor: hand;margin-right: 20px;" onclick="window.location.href=\'profile.php\'">';
-  } else{
-        } ?>
-      </nav>
-  </header>
+  <?php include "header.php"; ?>
   <section style="background-color: #eee;">
       <div class="row justify-content-center">
         <div class="col-lg-4">
@@ -134,11 +90,11 @@
               <ul class="list-group list-group-flush rounded-3">
                 <li class="list-group-item d-flex justify-content-between align-items-center p-3">
                   <i class="fas fa-globe fa-lg text-warning"></i>
-                  <p class="mb-0">https://mdbootstrap.com</p>
+                  <p class="mb-0"></p>
                 </li>
                 <li class="list-group-item d-flex justify-content-between align-items-center p-3">
                   <i class="fab fa-github fa-lg" style="color: #333333;"></i>
-                  <p class="mb-0">mdbootstrap</p>
+                  <p class="mb-0"></p>
                 </li>
                 <li class="list-group-item d-flex justify-content-between align-items-right ">
                 <form  method="post">
@@ -187,7 +143,7 @@
               </div>
  
               <div class="col-sm-9">
-                <p class="text-muted mb-0"  style="margin-top: 20px;">(048) 804 494</p>
+                <p class="text-muted mb-0"  style="margin-top: 20px;"><?php echo $_SESSION['user_number'] ?></p>
               </div>
             </div>
             <div class="col-sm-9">
@@ -269,6 +225,7 @@
     </div>
   </div>
 </section>
+<?php include "footer.php"; ?>
         <script src="..js/profile.js"></script>
 </body>
 </html>

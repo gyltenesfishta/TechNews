@@ -8,13 +8,17 @@
     $verify_password = $_POST['verify_password'];
     
     if (empty($curr_password)) {
-        header("Location: ../change-info/changePw.php?error=Password is required");
+        header("Location: ../change-info/changePw.php?error=Fjalëkalimi është i zbrazët");
     }else if (empty($new_password)) {
-        header("Location: ../change-info/changePw.php?error=Password is required");
+        header("Location: ../change-info/changePw.php?error=Fjalëkalimi është i zbrazët");
     }else if (empty($verify_password)) {
-        header("Location: ../change-info/changePw.php?error=Password is required");
+        header("Location: ../change-info/changePw.php?error=Fjalëkalimi është i zbrazët");
     } else {
         $sql = "SELECT * FROM users WHERE id = '{$_SESSION['user_id']}'";
+        $result = mysqli_query($conn, $sql);
+        $row = mysqli_fetch_assoc($result);
+        $hashed_password = hash('sha256', $row['salt'] . $curr_password);
+        if(hash('sha256', $row['salt'] . $curr_password) === $row['hashed_password']){
         $result = mysqli_query($conn, $sql);
         if (mysqli_num_rows($result) === 1) {
             $row = mysqli_fetch_assoc($result);
@@ -30,17 +34,18 @@
             // Compare the hashed password
         else {
                 // Passwords don't match, show error
-                header("Location: ../change-info/changePw.php?error=Passwords don't match");
+                header("Location: ../change-info/changePw.php?error=Fjalëkalimet nuk përputhen");
                 exit();
             }
-        } else {
+        } 
+    }else {
             // User not found, show error
-            header("Location: ../change-info/changePw.php?error=Password not found");
+            header("Location: ../change-info/changePw.php?error=Fjalëkalimi i tanishëm nuk u gjend");
             exit();
         }
     }
 } else {
-    header("Location: login.php?error =Fill all fields");
+    header("Location: ../change-info/changePw.php?error =Mbush të gjitha fushat");
     exit();
 }
 ?>

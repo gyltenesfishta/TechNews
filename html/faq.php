@@ -1,6 +1,5 @@
 <?php
 session_start();
-include "db_conn.php";
 if (isset($_POST["login"])) {
   header("Location: login.php");
   exit();
@@ -11,6 +10,7 @@ if (isset($_POST["signup"])) {
   exit();
 }
 ?>
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -22,75 +22,7 @@ if (isset($_POST["signup"])) {
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   </head>
   <body style="background-color: #FFFDD0;">
-  <header>
-    <nav class="navbar navbar-expand-lg navbar-dark p-3 bg-primary" id="headerNav">
-      <div class="container-fluid">
-      <?php 
-    if (!isset($_SESSION["user_id"])) {
-    echo '<form method="post">
-              <button type="submit" name="login" class="btn btn-warning" onclick="window.location.href = \'login.php\';">Login</button>
-          </form>';
-          echo '<form method="post">
-              <button type="submit" name="signup" class="btn btn-warning" onclick="window.location.href = \'signup.php\';">Sign up</button>
-          </form>';
-                    }?>
-        <a class="navbar-brand d-block d-lg-none" >
-          <img src="/static_files/images/logos/logo_2_white.png" height="80" />
-        </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        
-        <div class=" collapse navbar-collapse" id="navbarNavDropdown" style = "margin-left: -17px;">
-          <ul class="navbar-nav mx-auto">
-            <li class="nav-item">
-              <a class="nav-link mx-2" aria-current="page" href="index.php">Ballina</a>
-            </li>
-            
-            <li class="nav-item">
-              <a class="nav-link mx-2" href="contact.php">Kontaktet</a>
-            </li>
-            <li class="nav-item d-none d-lg-block">
-              <a class="nav-link mx-2" href="index.php">
-                <img src="../images/Tech-News.png" height="45px" width="200px" class="logo" />
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link mx-2" href="news.php">Lajmet</a>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link mx-2 dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Më shumë
-              </a>
-              <?php if (isset($_SESSION['user_id'])) { ?>
-              <ul class="dropdown-menu"  aria-labelledby="navbarDropdownMenuLink" style = "height: 190px;">
-                <li><a class="dropdown-item" href="historiku.php">Arkiva</a></li>
-                <li><a class="dropdown-item" href="marketing.php">Marketing</a></li>
-                <li><a class="dropdown-item" href="faq.php">FAQ</a></li>
-                <li><a class="dropdown-item" href="#"><?php echo $_SESSION['nav-item']; ?></a></li>
-                <?php } else{ ?>
-                  <ul class="dropdown-menu"  aria-labelledby="navbarDropdownMenuLink" style = "height: 130px;">
-                <li><a class="dropdown-item" href="historiku.php">Arkiva</a></li>
-                <li><a class="dropdown-item" href="marketing.php">Marketing</a></li>
-                <li><a class="dropdown-item" href="faq.php">FAQ</a></li>
-                <?php } ?>
-              </ul>
-            </li>
-          </ul>
-        </div>
-      </div>
-      <?php 
-  if(isset($_SESSION["user_id"]) && $_SESSION["user_id"] == 1){ 
-    echo '<img class="rounded-circle" alt="avatar1" src="data:image/jpeg;base64,' . base64_encode($_SESSION['image']) . '" style="width: 50px; margin-right: 20px; cursor: hand;margin-right: 20px;" onclick="window.location.href=\'../ceo/index.php\'">';
-  } 
-  else if(isset($_SESSION["user_id"])){
-    echo '<img class="rounded-circle" alt="avatar1" src="data:image/jpeg;base64,'.base64_encode($_SESSION['image']).'" style="width: 50px; height: 50px; margin-right: 20px; cursor: hand;margin-right: 20px;" onclick="window.location.href=\'profile.php\'">';
-  } 
-  else{
-  } 
-        ?>
-    </nav>
-</header>
+<?php include "header.php" ?>
     <!--Section: FAQ-->
 <section>
   <h3 class="text-center mb-4 pb-2 text-primary fw-bold">FAQ</h3>
@@ -160,6 +92,7 @@ if (isset($_POST["signup"])) {
 </div>
   </div>
 </section>
+<?php include "footer.php" ?>
 <!--Section: FAQ-->
   </body>
 

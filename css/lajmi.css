@@ -114,18 +114,4 @@ a:hover{
     margin-top: -50px;
     padding-left: 75px;
     display: inline-block;
-
-}
-#submit{
-    border-radius: 10px;
-    color: red;
-    font-weight: bold;
-}
-.emailText,.passwordText{
-    border-radius: 8px;
-}
-.subscribe{
-    position: absolute;
-    margin-top: -50px;
-    color: gray;
 }

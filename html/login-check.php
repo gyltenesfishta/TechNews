@@ -35,6 +35,7 @@
                 $_SESSION["lastname"] = $row["lastname"];
                 $_SESSION["email"] = $row["email"];
                 $_SESSION["image"] = $row["image"];
+                $_SESSION['user_number'] = $row['number'];
 
                 header("Location: index.php");
                 exit;
