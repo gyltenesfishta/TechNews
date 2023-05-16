@@ -9,7 +9,7 @@
   }
   if(isset($_POST['logout'])) { 
       session_destroy(); 
-      header("Location: ..html/index.php"); 
+      header("Location: index.php"); 
       exit();
   }
   if(isset($_POST['change_pw'])) {  
@@ -44,7 +44,10 @@
       
     }
     $image = $_SESSION["image"];
-
+    if(isset($_POST['change_number'])) {  
+      header("Location: ../change-info/change-number.php"); 
+      exit();
+    }
  ?>
   <!DOCTYPE html>
   <html lang="en">
@@ -150,7 +153,7 @@
                 </li>
                 <li class="list-group-item d-flex justify-content-between align-items-right ">
                 <form  method="post">
-                <button type="submit" name = "logout" class="btn btn-warning log_out_btn" style="margin-left:422px;white-space: nowrap; onclick = "window.location.href = 'login.php';"> Dil</button>
+                <button type="submit" name = "logout" class="btn btn-warning log_out_btn" style="margin-left:422px;white-space: nowrap; onclick = "window.location.href = 'index.php';"> Dil</button>
                 </form>
                 </li>
               </ul>
@@ -180,24 +183,26 @@
             <hr>
             <div class="row">
               <div class="col-sm-3">
-                <p class="mb-0">Telefoni</p>
+                <p class="mb-0" style="margin-top: 20px;">Telefoni</p>
               </div>
  
               <div class="col-sm-9">
-                <p class="text-muted mb-0">(048) 804 494</p>
+                <p class="text-muted mb-0"  style="margin-top: 20px;">(048) 804 494</p>
               </div>
             </div>
+            <div class="col-sm-9">
+              <form method="post">    
+              <button type="submit" name = "change_number" class="btn btn-success change_pw" style="margin-left: 350px;white-space: nowrap; margin-top: -50px;">Ndrysho numrin</button>
+            </form>
+              </div>
             <hr>
             <div class="row">
               <div class="col-sm-3">
                 <p class="mb-0" style="margin-top: 10px;">Fjalëkalimi</p>
               </div>
               <div class="col-sm-9">
-              <form method="post">
-             
-                  
+              <form method="post">    
               <button type="submit" name = "change_pw" class="btn btn-success change_pw">Ndrysho fjalëkalimin</button>
-           
             </form>
               </div>
             </div>

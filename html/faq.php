@@ -131,9 +131,7 @@ if (isset($_POST["signup"])) {
     </div>
 
     <div class="col-md-6 col-lg-4 mb-4">
-      <h6 class="mb-3 text-primary"> A simple
-        question?
-      </h6>
+      <h6 class="mb-3 text-primary">A mund të sugjerojë dhe të dërgojë ndonjë lajm për ju?</h6>
       <p><strong><u>Unfortunately no</u>.</strong> We do not issue full or partial refunds for any
         reason.</p>
     </div>
