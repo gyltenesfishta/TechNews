@@ -64,17 +64,23 @@ if (isset($_POST["signup"])) {
               <a class="nav-link mx-2" href="news.php">Lajmet</a>
             </li>
             <li class="nav-item dropdown">
-              <a class="nav-link mx-2 dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-  
-                Më shumë
-              </a>
-              <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" style="height: 190px">
-                <li><a class="dropdown-item" href="historiku.php">Arkiva</a></li>
-                <li><a class="dropdown-item" href="marketing.php">Marketing</a></li>
-                <li><a class="dropdown-item" href="faq.php">FAQ</a></li>
-                <li><a class="dropdown-item" href="#"></a></li>
-              </ul>
-            </li>
+            <a class="nav-link mx-2 dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Më shumë
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" style="height: <?php echo (isset($_SESSION['role']) && $_SESSION['role'] == "Journalist") ? "240px" : "190px"; ?>">
+              <li><a class="dropdown-item" href="historiku.php">Arkiva</a></li>
+              <li><a class="dropdown-item" href="marketing.php">Marketing</a></li>
+              <li><a class="dropdown-item" href="faq.php">FAQ</a></li>
+              <?php
+              if (isset($_SESSION['role']) && $_SESSION['role'] == "Journalist") {
+                
+                echo '<li><a class="dropdown-item shto-item" href="#" style="background-color: dodgerblue;">Shto lajmin</a></li>';
+                echo '<style> .dropdown-item:hover { background-color: black !important;}</style>';
+              }
+              ?>
+            </ul>
+          </li>
+
           </ul>
         </div>
       </div>
