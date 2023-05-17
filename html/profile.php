@@ -44,8 +44,7 @@
       mysqli_stmt_execute($stmt);
       mysqli_stmt_close($stmt);
       mysqli_close($conn);
-      $_SESSION["image"] = $image_data;
-      
+      $_SESSION["image"] = $image_data; 
     }
     $image = $_SESSION["image"];
     if(isset($_POST['change_number'])) {  
@@ -81,8 +80,7 @@
               <form  method="post" enctype="multipart/form-data">
                 <input type="file" class="custom-file-input" name="image" id="image" style="margin-left: -50px; ">
                 <button type="submit" name = "insert_photo" class="btn btn-success" style="margin-left: 280px;margin-top: -60px; white-space: nowrap;">Shto foton</button>
-                </form>
-
+              </form>
             </div>
           </div>
           <div class="card mb-2 mb-lg-5">
@@ -172,7 +170,7 @@
               <div class="card-body">
                 <p class="mb-4">Lajmet më të klikuara
                 </p>
-                <p class="mt-4 mb-1" style="font-size: .77rem;"><a href="1.3.php">Pajisjet inteligjente bëhen rrezik hakerimi për
+                <p class="mt-4 mb-1" style="font-size: .77rem;"><a href="news-structure.php?newId=1">Pajisjet inteligjente bëhen rrezik hakerimi për
                                                                  shkak të politikave të dobëta të përditësimit</a></p>
                 
                 <p class="mt-4 mb-1" style="font-size: .77rem;"><a href="3.3.php">TikTok shpërndan etiketën e tij 'media e kontrolluar 

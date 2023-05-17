@@ -97,7 +97,7 @@ if (isset($_POST["signup"])) {
                 });
                   </script>
 
-  <script src="/js/contact.js"></script>
+  <script src="../js/contact.js"></script>
     
 </body>
 </html>

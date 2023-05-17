@@ -1,5 +1,17 @@
-<?php 
+<?php
 session_start();
+include "db_conn.php";
+
+// Get the current page number from the URL, or set it to 1 if not present
+$page = isset($_GET['page']) ? intval($_GET['page']) : 1;
+
+// Calculate the offset for the current page based on the page number
+$offset = ($page - 1) * 5;
+
+// Fetch the articles for the current page using LIMIT and OFFSET clauses
+$sql = "SELECT * FROM articles LIMIT 5 OFFSET $offset";
+$result = mysqli_query($conn, $sql);
+
 if (isset($_POST["login"])) {
   header("Location: login.php");
   exit();
@@ -29,65 +41,41 @@ if (isset($_POST["signup"])) {
     </style>
 </head>
 <?php include "header.php" ?>
-
 <body>
     <div class="lajmet">
         <span class="lajmet12">
-        <div class="lajmi1">
         
-        <img src="../images/iPhone-14-vs.-iPhone-13-The-biggest-differences.jpg" class="foto1" alt="Iphone 13 vs Iphone 14" id="text_a">
-        <h2 class="hlajmi1"><a href="news-structure.php?newId=1">Krahasimi i shkëlqyeshëm: iPhone 13 VS iPhone 14, <br>cili ia vlen?</a></h2><p class="plajmi1">Për herë të parë ndonjëherë, iPhone 14 i ri përdor të njëjtin procesor si modeli i mëparshëm, dhe kur shtoni kamerat kryesisht të pandryshuara dhe dizajnin shumë të ngjashëm, Apple mund ta ketë quajtur këtë iPhone 13S.
-          Është e rëndësishme të dini se në të kaluarën, Apple bëri ndryshime më të mëdha në iPhone-in e saj të ri çdo vit, dhe kjo është arsyeja pse iPhone 14 ndihet ndryshe...</p> 
-        </div>
-        <hr>
-        <div class="lajmi2">
-            <img  src="../images/coding.jpg" class="foto" alt="Coding">
-            <h6 class="hlajmi2"><a href="news-structure.php?newId=2" id="text_a">A po ndihmojnë platformat e Low Code në zgjidhjen e krizës së aftësive?</a></h6>
-            <p class="plajmi2"> Platformat që lejojnë përdoruesit e thjeshtë të krijojnë aplikacione, të përpunojnë 
-              <br>të dhëna dhe madje të kryejnë mësimin e makinerive me kod 
-              <br>minimal ose pa kod janë në rritje. A mund ta...
-         </div>        
-         <hr>
-        </span>
-        <div class="lajmet34">
-         <div class="lajmi3">
-        <img src="../images/smart-home2.jpg" class="foto" alt="Smart Device">
-        <h6 class="hlajmi3"><a href="1.3.html" id="text_a">Pajisjet inteligjente bëhen rrezik hakerimi për shkak të politikave të dobëta të përditësimit</a></h6>
-        <p class="plajmi3">Pajisjet inteligjente si makinat larëse dhe televizorët rrezikojnë të humbasin
-          <br> veçoritë dhe funksionalitetin kryesor në vetëm dy vjet, hulumtimi
-          <br> ka zbuluar. Firma analizoi produktet duke... 
+        <?php 
+foreach ($result as $row) {
+  
 
-          </p>
-         </div>
-         <hr>
-         <div class="lajmi4"></div>
-         </div>
-    </div>
+  echo '<a href="news-structure.php?newId=' . $row['id'] .'"><div style="display: flex; align-items: center; margin-top: 30px;margin-right: 100px;margin-left: 30px;">
+          <img alt="avatar1" src="data:image/jpeg;base64,'.base64_encode($row['fotoja']).'" style="width: 480px; height: 250px; margin-right: 70px;">
+          <div style="text-align: left; width: 800px;margin-left: -30px;">
+            <h2 style="margin-top: -50px;">'.$row['titulli'].'</h2>';
+          
+  echo '</div>
+        </div></a>';
+}
+
+// Count the total number of articles to calculate the total number of pages
+$sql = "SELECT COUNT(*) as total FROM articles";
+$result = mysqli_query($conn, $sql);
+$row = mysqli_fetch_assoc($result);
+$total_pages = ceil($row['total'] / 5);
+
+// Generate links to navigate between pages
+echo '<div class="tabelat"><table border="1"><tr>';
+for ($i = 1; $i <= $total_pages; $i++) {
+    if ($i == $page) {
+        echo '<td>' . $i . '</td>';
+    } else {
+        echo '<td><a href="?page=' . $i . '">' . $i . '</a>';
+    }
+} 
+?>
 
 
 
-<div class="tabelat">
-    <table border="1">
-        <tr>
-            <td ><a href="#">1</a></td>
-            <td ><a href="2.php">2</a></td>
-            <td ><a href="3.php"> 3</a></td>
-            <td ><a href="4.php"> 4</a></td>
-        </tr>
-        
-        
-    </table>
-</div>   
-      <?php include "footer.php"; ?>
-              <script>
-                $(document).ready(function() {
-              $("#submit").click(function() {
-                alert("You successfully signed up!");
-              });
-            });
-              </script>
-<script src="../js/index.js">
 
-</script>
-</body>
-</html>
+

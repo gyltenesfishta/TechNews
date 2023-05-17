@@ -1,5 +1,4 @@
 <?php 
-$image = $_SESSION['image'];
 ?>
 <header>
     <nav class="navbar navbar-expand-lg navbar-dark p-3 bg-primary" id="headerNav">
@@ -14,9 +13,6 @@ $image = $_SESSION['image'];
           </form>';
     }
     ?>
-        <a class="navbar-brand d-block d-lg-none" href="#">
-          <img src="/static_files/images/logos/logo_2_white.png" height="80" />
-        </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -49,7 +45,7 @@ $image = $_SESSION['image'];
               <?php
               if (isset($_SESSION['role']) && $_SESSION['role'] == "Journalist") {
                 
-                echo '<li><a class="dropdown-item shto-item" href="#" style="background-color: dodgerblue;">Shto lajmin</a></li>';
+                echo '<li><a class="dropdown-item shto-item" href="shto-lajmin.php" style="background-color: dodgerblue;">Shto lajmin</a></li>';
                 echo '<style> .dropdown-item:hover { background-color: black !important;}</style>';
               }
               ?>
@@ -59,10 +55,12 @@ $image = $_SESSION['image'];
         </div>
       </div>
       <?php if(isset($_SESSION["user_id"]) && $_SESSION["user_id"] == 1){ 
+        $image = $_SESSION['image'];
         echo '<p>Profili</p>';
-            echo '<img class="rounded-circle" alt="avatar1" src="data:image/jpeg;base64,'.base64_encode($image).'" style="width: 50px;" onclick="window.location.href=\'..ceo/index.php\'">';
+            echo '<img class="rounded-circle" alt="avatar1" src="data:image/jpeg;base64,'.base64_encode($image).'" style="width: 50px;" onclick="window.location.href=\'../ceo/index.php\'">';
         } else if(isset($_SESSION["user_id"])){
-            echo '<p style = "margin-top: 20px; color: white; font-size: 25px; font-family: Arial;">Profili</p>';
+          $image = $_SESSION['image'];
+            echo '<p style = "margin-top: 20px; color: white; font-size: 25px; font-family: Arial; padding: 5px;">Profili</p>';
         echo '<img class="rounded-circle" alt="avatar1" src="data:image/jpeg;base64,'.base64_encode($image).'" style="width: 50px; height: 50px" onclick="window.location.href=\'profile.php\'">';
     } 
       else{

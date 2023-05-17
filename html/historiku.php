@@ -29,6 +29,7 @@ body{
 }
 .nav-link{
     color: white;
+    margin-top: 5px;
 }
 .nav-link:hover{
     color: black;
@@ -64,9 +65,6 @@ body{
 .navbar{
     height: 70px;
 }
-
-
-
         body{
             background-color:lemonchiffon;
         }
