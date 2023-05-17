@@ -154,3 +154,6 @@ a{
 .btn{
     margin-top: 5px;
 }
+.rounded-circle{
+    cursor: pointer;
+}

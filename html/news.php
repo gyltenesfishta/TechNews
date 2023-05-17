@@ -65,15 +65,21 @@ $row = mysqli_fetch_assoc($result);
 $total_pages = ceil($row['total'] / 5);
 
 // Generate links to navigate between pages
-echo '<div class="tabelat"><table border="1"><tr>';
-for ($i = 1; $i <= $total_pages; $i++) {
-    if ($i == $page) {
-        echo '<td>' . $i . '</td>';
-    } else {
-        echo '<td><a href="?page=' . $i . '">' . $i . '</a>';
-    }
-} 
-?>
+echo '<div class="tabelat">
+        <table border="1">
+          <tr>';
+            for ($i = 1; $i <= $total_pages; $i++) {
+              if ($i == $page) {
+                  echo '<td>' . $i . '</td>';
+              } else {
+                  echo '<td><a href="?page=' . $i . '">' . $i . '</a>';
+              }
+            } 
+             ?>
+          </tr></table></div>
+<?php include "footer.php" ?>
+</body>
+</html>
 
 
 

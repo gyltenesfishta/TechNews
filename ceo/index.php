@@ -1,5 +1,6 @@
 <?php
 session_start();
+include "../html/db_conn.php";
 if((isset($_SESSION['user_id']))){
 if ($_SESSION["role"] == "Journalist") {
     $_SESSION["nav_item"] = "Shto";
@@ -14,7 +15,35 @@ if(isset($_POST['change_pw'])) {
     header("Location: changePww.php"); 
     exit();
   }
+
+    // Retrieve the total count of articles from the database
+    $sql = "SELECT COUNT(*) as total_articles FROM articles";
+    $result = mysqli_query($conn, $sql);
+    $row = mysqli_fetch_assoc($result);
+    $total_articles = $row['total_articles'];
+
+    $sql1 = "SELECT COUNT(*) AS total_publications
+          FROM articles
+          WHERE YEAR(data_publikimit) = YEAR(CURRENT_DATE())
+            AND MONTH(data_publikimit) = MONTH(CURRENT_DATE())";
+  $result1 = mysqli_query($conn, $sql1);
+
+  if ($result1 && mysqli_num_rows($result1) > 0) {
+    $row1 = mysqli_fetch_assoc($result1);
+    $total_publications = $row1['total_publications'];
+  } else {
+    $total_publications = 0;
+  }
+
+
+   $sql2 = "SELECT COUNT(*) AS total_articles, COUNT(*) * 2 AS total_earnings
+FROM articles
+WHERE MONTH(data_publikimit) = MONTH(NOW());";
+$result2 = mysqli_query($conn, $sql2);
+$row2 = mysqli_fetch_assoc($result2);
+$total_articles1 = $row2['total_earnings'];
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -268,7 +297,7 @@ echo '<img class="rounded-circle" alt="avatar1" src="../images/male-pfp.png" sty
                                         <div class="col mr-2">
                                             <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
                                                 Publikimet totale</div>
-                                            <div class="h5 mb-0 font-weight-bold text-gray-800">3965</div>
+                                            <div class="h5 mb-0 font-weight-bold text-gray-800"><?php echo $total_articles ?></div>
                                         </div>
                                         <div class="col-auto">
                                             <i class="fas fa-calendar fa-2x text-gray-300"></i>
@@ -286,7 +315,7 @@ echo '<img class="rounded-circle" alt="avatar1" src="../images/male-pfp.png" sty
                                         <div class="col mr-2">
                                             <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
                                                 Publikimet këtë muaj</div>
-                                            <div class="h5 mb-0 font-weight-bold text-gray-800">950</div>
+                                            <div class="h5 mb-0 font-weight-bold text-gray-800"><?php echo $total_publications ?></div>
                                         </div>
                                         <div class="col-auto">
                                             <i class="fas fa-calendar fa-2x text-gray-300"></i>
@@ -306,7 +335,7 @@ echo '<img class="rounded-circle" alt="avatar1" src="../images/male-pfp.png" sty
                                             </div>
                                             <div class="row no-gutters align-items-center">
                                                 <div class="col-auto">
-                                                    <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">33000€</div>
+                                                    <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800"><?php echo $total_articles1 ?></div>
                                                 </div>
                                                 
                                             </div>

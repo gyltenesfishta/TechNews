@@ -42,26 +42,7 @@ if (isset($_POST["signup"])) {
         <br><br><br><br>
         <p><?php echo $permbajtja ?></p>
 </div>
-    
-    <nav aria-label="Page navigation">
-      <ul class="pagination">
-          <a href="1.2.html" aria-label="Next" style="margin-left: 1100px">
-            <span aria-hidden="true">Next <i class="fa fa-chevron-right" aria-hidden="true"></i></span>
-          </a>
-        </li>
-      </ul>
-    </nav> 
    <?php include "footer.php"; ?>
-                  <script>
-                    $(document).ready(function() {
-                  $("#submit").click(function() {
-                    alert("You successfully signed up!");
-                  });
-                });
-                  </script>
-
- <script src="../js/index.js">
-    
-  </script>
+ <script src="../js/index.js"></script>
 </body>
 </html>

@@ -43,7 +43,7 @@
               <li><a class="dropdown-item" href="marketing.php">Marketing</a></li>
               <li><a class="dropdown-item" href="faq.php">FAQ</a></li>
               <?php
-              if (isset($_SESSION['role']) && $_SESSION['role'] == "Journalist") {
+              if (isset($_SESSION['role']) && $_SESSION['role'] == "Gazetar") {
                 
                 echo '<li><a class="dropdown-item shto-item" href="shto-lajmin.php" style="background-color: dodgerblue;">Shto lajmin</a></li>';
                 echo '<style> .dropdown-item:hover { background-color: black !important;}</style>';
@@ -54,14 +54,14 @@
           </ul>
         </div>
       </div>
-      <?php if(isset($_SESSION["user_id"]) && $_SESSION["user_id"] == 1){ 
+      <?php if(isset($_SESSION["user_id"]) && $_SESSION["user_id"] == 1 && isset($_SESSION['image'])){ 
         $image = $_SESSION['image'];
         echo '<p>Profili</p>';
-            echo '<img class="rounded-circle" alt="avatar1" src="data:image/jpeg;base64,'.base64_encode($image).'" style="width: 50px;" onclick="window.location.href=\'../ceo/index.php\'">';
+            echo '<img class="rounded-circle" alt="avatar1" src="data:image/jpeg;base64,'.base64_encode($image).'" style="width: 50px;cursor: pointer;" onclick="window.location.href=\'../ceo/index.php\'">';
         } else if(isset($_SESSION["user_id"])){
           $image = $_SESSION['image'];
             echo '<p style = "margin-top: 20px; color: white; font-size: 25px; font-family: Arial; padding: 5px;">Profili</p>';
-        echo '<img class="rounded-circle" alt="avatar1" src="data:image/jpeg;base64,'.base64_encode($image).'" style="width: 50px; height: 50px" onclick="window.location.href=\'profile.php\'">';
+            echo '<img class="rounded-circle" alt="avatar1" src="data:image/jpeg;base64,'.base64_encode($image).'" style="width: 50px; height: 50px;cursor: pointer;" onclick="window.location.href=\'profile.php\'">';
     } 
       else{
       } ?>

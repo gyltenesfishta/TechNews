@@ -60,21 +60,4 @@ a:hover{
 .header-container-search{
     position: relative;
 }
-.searchText{
-    position: absolute;
-    margin-left: 700px;
-    margin-top: 1%;
-    border-radius: 5px;
-    border-color: yellow;
-    color: black;
-}
-.searchButton{
-    margin-left: 900px;
-    margin-top: 1%;
-    border-radius: 5px;
-    border-color: blue;
-    color: black;
-}
-.emailText{
-    border-radius: 8px;
-}
+
