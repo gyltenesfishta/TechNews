@@ -37,6 +37,9 @@
                 $_SESSION["image"] = $row["image"];
                 $_SESSION['user_number'] = $row['number'];
 
+                setcookie("username", $_SESSION["username"], (time() + 30 * 24 * 60 * 60));
+                setcookie("password", $_SESSION["password"], (time() + 30 * 24 * 60 * 60));
+
                 header("Location: index.php");
                 exit;
                 
