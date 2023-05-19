@@ -50,6 +50,8 @@
                       $_SESSION["email"] = $row["email"];
                       header("Location: /../ceo/index.php");
                       exit;
+                  }else{
+                    header("Location: ../html/index.php");
                   }
             } else {
                 // Passwords don't match, show error
