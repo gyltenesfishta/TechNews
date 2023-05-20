@@ -51,9 +51,6 @@
       header("Location: ../change-info/change-number.php"); 
       exit();
     }
-    $sql = "SELECT * FROM articles";
-    $result = mysqli_query($conn, $sql);
-    $row = mysqli_fetch_assoc($result);
  ?>
   <!DOCTYPE html>
   <html lang="en">

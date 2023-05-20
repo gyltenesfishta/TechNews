@@ -12,11 +12,14 @@ if(isset($_POST['shto-lajmin'] ) && is_uploaded_file($_FILES['articleImage']['tm
     $stmt = mysqli_prepare($conn, $sql);
     mysqli_stmt_bind_param($stmt, "sss", $titulli, $permbajtja, $image_data);
     $result = mysqli_stmt_execute($stmt);
-    if($result){
-        header("Location: shto-lajmin.php?alert=Lajmi u shtua me sukses!");
+    if ($result) {
+        $response = array('status' => 'success', 'message' => 'Lajmi u shtua me sukses!');
+        echo json_encode($response);
         exit;
-} else {
-    echo " error";
-}
+    } else {
+        $response = array('status' => 'error', 'message' => 'Error occurred while inserting the article.');
+        echo json_encode($response);
+        exit;
+    }
 }
 ?>

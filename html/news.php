@@ -38,22 +38,36 @@ if (isset($_POST["signup"])) {
       img{
         border-radius: 10px;
       }
+      .search-container {
+        margin: 20px auto;
+        max-width: 400px;
+    }
+
+    .search-container input[type="text"] {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid green;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+
     </style>
 </head>
 <?php include "header.php" ?>
 <body>
-    <div class="lajmet">
+    <div class="search-container my-3">
+        <input type="text" id="search-input" placeholder="Kërko artikujt...">
+    </div>
+
+    <div class="lajmet" id="article-container"> <!-- Add the ID to the container -->
         <span class="lajmet12">
         
         <?php 
 foreach ($result as $row) {
-  
-
   echo '<a href="news-structure.php?newId=' . $row['id'] .'"><div style="display: flex; align-items: center; margin-top: 30px;margin-right: 100px;margin-left: 30px;">
           <img alt="avatar1" src="data:image/jpeg;base64,'.base64_encode($row['fotoja']).'" style="width: 480px; height: 250px; margin-right: 70px;">
           <div style="text-align: left; width: 800px;margin-left: -30px;">
             <h2 style="margin-top: -50px;">'.$row['titulli'].'</h2>';
-          
   echo '</div>
         </div></a>';
 }
@@ -63,6 +77,8 @@ $sql = "SELECT COUNT(*) as total FROM articles";
 $result = mysqli_query($conn, $sql);
 $row = mysqli_fetch_assoc($result);
 $total_pages = ceil($row['total'] / 5);
+
+echo '</div>'; // Close the article container div
 
 // Generate links to navigate between pages
 echo '<div class="tabelat">
@@ -78,10 +94,22 @@ echo '<div class="tabelat">
              ?>
           </tr></table></div>
 <?php include "footer.php" ?>
+
+<script>
+    $(document).ready(function() {
+        $("#search-input").on("input", function() {
+            var searchText = $(this).val().toLowerCase();
+            $(".lajmet12 a").each(function() {
+                var articleTitle = $(this).find("h2").text().toLowerCase();
+                if (articleTitle.indexOf(searchText) === -1) {
+                    $(this).hide();
+                } else {
+                    $(this).show();
+                }
+            });
+        });
+    });
+</script>
+
 </body>
 </html>
-
-
-
-
-
