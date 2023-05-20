@@ -6,7 +6,7 @@ if (isset($_GET['query'])) {
   $query = $_GET['query'];
 
   // Fetch the articles based on the search query
-  $sql = "SELECT * FROM articles WHERE titulli LIKE '%$query%' OR permbajtja LIKE '%$query%'";
+  $sql = "SELECT * FROM articles WHERE titulli LIKE '%$query%'";
   $result = mysqli_query($conn, $sql);
 
   if ($result) {

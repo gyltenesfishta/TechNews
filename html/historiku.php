@@ -167,7 +167,7 @@ Ne fillimet e gazetes, te punesuar kane qene vetem 5 puntore. Ne zhvillimet e si
 </div>
 
 <div class="p">
-<img class="z" src="/images/gazeta.jpg">
+<img class="z" src="../images/gazeta.jpg">
 <canvas>
 
 </canvas><p class="ambienti"> Ky eshte ambienti i punes; <br> i bukur, i rehatshem, ndriçues, motivues per te gjithe qe punojne ketu. </p>
