@@ -22,7 +22,7 @@ if (isset($_POST["signup"])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TechNews.com - Lajmet e fundit nga teknologjia</title>
 </head>
-<body>
+<body style = "font-family:  Arial, Helvetica, sans-serif;">
 <?php include "header.php" ?>
       <div class="container">
       <video width="100%" height="500px" loop autoplay>

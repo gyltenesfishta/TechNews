@@ -1,6 +1,7 @@
   <?php
   session_start();
   include "../html/db_conn.php";
+  
   if((isset($_SESSION['user_id']))){
   if ($_SESSION["role"] == "Journalist") {
       $_SESSION["nav_item"] = "Shto";
@@ -64,7 +65,7 @@
       <link href="../css/profile.css" rel="stylesheet">
       <title>Profili</title>
   </head>
-  <body>
+  <body style = "font-family:  Arial, Helvetica, sans-serif;">
   <?php include "header.php"; ?>
   <section style="background-color: #eee;">
       <div class="row justify-content-center">
@@ -86,13 +87,10 @@
           <div class="card mb-2 mb-lg-5">
             <div class="card-body p-0">
               <ul class="list-group list-group-flush rounded-3">
-                <li class="list-group-item d-flex justify-content-between align-items-center p-3">
-                  <i class="fas fa-globe fa-lg text-warning"></i>
-                  <p class="mb-0"></p>
-                </li>
+                
                 <li class="list-group-item d-flex justify-content-between align-items-center p-3">
                   <i class="fab fa-github fa-lg" style="color: #333333;"></i>
-                  <p class="mb-0"></p>
+                  <p class="mb-0"><?php echo '<b>'. $_SESSION['role'] .'</b>'?></p>
                 </li>
                 <li class="list-group-item d-flex justify-content-between align-items-right ">
                 <form  method="post">

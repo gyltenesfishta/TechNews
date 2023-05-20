@@ -28,7 +28,7 @@ if (isset($_POST["signup"])) {
 </head>
   <!-- Header -->
   <?php include "header.php"; ?>
-<body>
+  <body style = "font-family:  Arial, Helvetica, sans-serif;">
 <div class="ekipa"> 
   <h1 class="h1ekipa">Ekipa jonë</h1>
 

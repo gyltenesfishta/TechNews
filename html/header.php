@@ -1,4 +1,5 @@
 <?php 
+
 ?>
 <header>
     <nav class="navbar navbar-expand-lg navbar-dark p-3 bg-primary" id="headerNav">
@@ -38,10 +39,12 @@
             <a class="nav-link mx-2 dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               Më shumë
             </a>
-            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" style="height: <?php echo (isset($_SESSION['role']) && $_SESSION['role'] == "Journalist") ? "240px" : "190px"; ?>">
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" style="height: <?php echo (isset($_SESSION['role']) && $_SESSION['role'] == "Gazetar") ? "300px" : "240px"; ?>">
               <li><a class="dropdown-item" href="historiku.php">Arkiva</a></li>
               <li><a class="dropdown-item" href="marketing.php">Marketing</a></li>
               <li><a class="dropdown-item" href="faq.php">FAQ</a></li>
+              <li><a class="dropdown-item" href="twitter.php">Twitter</a></li>
+
               <?php
               if (isset($_SESSION['role']) && $_SESSION['role'] == "Gazetar") {
                 

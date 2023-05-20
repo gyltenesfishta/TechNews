@@ -54,7 +54,7 @@ if (isset($_POST["signup"])) {
     </style>
 </head>
 <?php include "header.php" ?>
-<body>
+<body style = "font-family:  Arial, Helvetica, sans-serif;">
     <div class="search-container my-3">
         <input type="text" id="search-input" placeholder="Kërko artikujt...">
     </div>

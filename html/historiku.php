@@ -144,6 +144,8 @@ canvas{
 
     </style>
 </head>
+<body style = "font-family:  Arial, Helvetica, sans-serif;">
+
 <?php include "header.php" ?>
     
 <div class="historiku">
