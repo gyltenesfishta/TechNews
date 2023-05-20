@@ -36,8 +36,14 @@
                 $_SESSION["email"] = $row["email"];
                 $_SESSION["image"] = $row["image"];
                 $_SESSION['user_number'] = $row['number'];
-            
-
+                setcookie("user_id", $row["id"], time() + (86400 * 30), "/");
+                setcookie("username", $row["username"], time() + (86400 * 30), "/");
+                setcookie("role", $row["role"], time() + (86400 * 30), "/");
+                setcookie("firstname", $row["firstname"], time() + (86400 * 30), "/");
+                setcookie("lastname", $row["lastname"], time() + (86400 * 30), "/");
+                setcookie("email", $row["email"], time() + (86400 * 30), "/");
+                setcookie("image", $row["image"], time() + (86400 * 30), "/");
+                setcookie("user_number", $row['number'], time() + (86400 * 30), "/");
                 header("Location: index.php");
                 exit;
                 
