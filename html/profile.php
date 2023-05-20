@@ -162,6 +162,7 @@
             <hr>
           </div>
         </div>
+        <?php if(($_SESSION['role']) == "Gazetar"){ ?>
         <div class="row">
           <div class="col-md-6">
             <div class="card mb-4 mb-md-0">
@@ -196,6 +197,7 @@
             </div>
           </div>
         </div>
+        <?php } ?>
       </div>
     </div>
   </div>

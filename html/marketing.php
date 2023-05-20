@@ -20,7 +20,7 @@ if (isset($_POST["signup"])) {
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TechNews.com - Lajmet e fundit nga teknologjia</title>
+    <title>Marketing</title>
 </head>
 <body style = "font-family:  Arial, Helvetica, sans-serif;">
 <?php include "header.php" ?>
