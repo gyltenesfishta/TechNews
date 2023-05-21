@@ -23,12 +23,12 @@ if (isset($_POST["signup"])) {
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TechNews.com - The latest news on Technology</title>
+    <title>Kontakti</title>
    
 </head>
   <!-- Header -->
   <?php include "header.php"; ?>
-<body>
+  <body style = "font-family:  Arial, Helvetica, sans-serif;">
 <div class="ekipa"> 
   <h1 class="h1ekipa">Ekipa jonë</h1>
 

@@ -17,8 +17,7 @@ session_start();
 </head>
 <?php include "header.php"; ?>
 
-<body>
-
+<body style = "font-family:  Arial, Helvetica, sans-serif;">
 <form method="post" action="shto-lajmin-logic.php" enctype="multipart/form-data">
   <div class="form-group">
     <label for="exampleInputEmail1" style = "padding-bottom: 10px; width: 50px; font-size: 30px;">Titulli</label>

@@ -36,8 +36,18 @@
     color: white;
     
 }
+.search-container {
+    margin: 20px auto;
+    max-width: 400px;
+}
 
-
+.search-container input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
 .navbar{
     height: 70px;
 }
