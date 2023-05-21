@@ -177,7 +177,7 @@ Ne fillimet e gazetes, te punesuar kane qene vetem 5 puntore. Ne zhvillimet e si
 
 <div class="table">
   <table id="">
-    <h3>Ndryshimi i statistikave</h3>
+    <h3><strong>Ndryshimi i statistikave</strong></h3>
     <thead>
         <tr bgcolor="#AED6F1">
             <th scope="col" title="Tech-News">Tech-News</th>
@@ -212,7 +212,7 @@ Ne fillimet e gazetes, te punesuar kane qene vetem 5 puntore. Ne zhvillimet e si
             <td>52,000</td>
             <td><progress max="100" value="40">40%</progress></td>
             <td><progress max="100" value="20">20%</progress></td>
-            <td><progress max="100" value="45">45%</progress></td>
+            <td><progress max="100" value="45">55%</progress></td>
             <td><progress max="100" value="15">15%</progress></td>
         </tr>
         <tr>
@@ -220,7 +220,7 @@ Ne fillimet e gazetes, te punesuar kane qene vetem 5 puntore. Ne zhvillimet e si
             <td>49,679</td>
             <td><progress max="100" value="35">35%</progress></td>
             <td><progress max="100" value="56">56%</progress></td>
-            <td><progress max="100" value="95">95%</progress></td>
+            <td><progress max="100" value="95">75%</progress></td>
             <td><progress max="100" value="40">40%</progress></td>
         </tr>
         <tr>
@@ -234,7 +234,7 @@ Ne fillimet e gazetes, te punesuar kane qene vetem 5 puntore. Ne zhvillimet e si
         <tr>
             <td>Ferizaj</td>
             <td>58,031</td>
-            <td><progress max="100" value="50">50%</progress></td>
+            <td><progress max="100" value="50">60%</progress></td>
             <td><progress max="100" value="55">55%</progress></td>
             <td><progress max="100" value="55">55%</progress></td>
             <td><progress max="100" value="80">80%</progress></td>
