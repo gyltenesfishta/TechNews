@@ -16,7 +16,7 @@
               <h6 class="text-uppercase fw-bold mb-4">
                 <i class="fas fa-gem me-3"></i>TECH NEWS</h6>
               <p>
-                Gazeta më e saktë në lidhje me lajmet nga teknologjia
+                <strong>Gazeta më e saktë në lidhje me lajmet nga teknologjia</strong>
               </p>
             </div>
             <!-- Grid column -->
@@ -25,7 +25,7 @@
             <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
               <!-- Links -->
               <h6 class="text-uppercase fw-bold mb-4">
-                Products
+                <strong>Products</strong>
               </h6>
               <p>
                 <a href="https://www.nvidia.com/en-eu/geforce/" target="_blank" class="text-reset">Nvidia</a>
@@ -49,7 +49,7 @@
             <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
               <!-- Links -->
               <h6 class="text-uppercase fw-bold mb-4">
-                Social Media Links
+                <strong> Social Media Links</strong>
               </h6>
               <p>
                 <a href="https://www.instagram.com/technews.ks/" class="text-reset" target="_blank">Instagram</a>
