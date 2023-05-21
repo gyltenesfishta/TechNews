@@ -35,13 +35,17 @@ if (isset($_POST["signup"])) {
         <title><?php echo $titulli; ?></title>
     </head>
   <?php include "header.php"; ?>
-<body>
+<body style = "font-family:  Arial, Helvetica, sans-serif;">
 <img src="data:image/jpeg;base64,<?php echo base64_encode($image_data); ?>" class="foto" alt="Iphone 13 vs Iphone 14" style= "width: 1100px;">
     <div class="paragrafi" style= "margin-left: 120px;">
         <h2><?php echo $titulli; ?></h2>
         <br><br><br><br>
         <p><?php echo $permbajtja ?></p>
 </div>
+      <!--Merre id e lajmit ne te cilin gjendesh -->
+      <form action="shto-lajmin-logic.php?newId=<?php echo $newId; ?>" method="post">
+      <button class="btn" name="fshij" style = "margin-left: 45%;height: 50px;background-color: red;color: white;font-weight: bold;">Fshij lajmin</button>
+</form>
    <?php include "footer.php"; ?>
  <script src="../js/index.js"></script>
 </body>
