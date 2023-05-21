@@ -4,7 +4,7 @@
     
 }
 .nav-link{
-    color: white;
+    color: whitesmoke;
 }
 .nav-link:hover{
     color: black;
@@ -20,7 +20,7 @@ a:hover{
     margin-top: -5px;
 }
 .dropdown-menu{
-    background-color:dodgerblue;
+    background-color: dodgerblue;
     height: 118px; 
 }
 .dropdown-item{
