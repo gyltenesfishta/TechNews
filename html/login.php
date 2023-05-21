@@ -13,26 +13,26 @@
   color: white;
   overflow-y: hidden;
   font-family:  Arial, Helvetica, sans-serif;
-}
-a{
+  }
+  a{
   color: white;
-}
-    #SCIENCE{
+  }
+  #SCIENCE{
       width: 350px;
       margin: 10% auto;
       display: block;
       animation: fade-in 2s ease-in-out forwards;
       opacity: 0;
-    }
+  }
 
-    @keyframes fade-in {
+  @keyframes fade-in {
       0% {
         opacity: 0;
       }
       100% {
         opacity: 1;
       }
-    }
+  }
   </style>
 </head>
 <body>

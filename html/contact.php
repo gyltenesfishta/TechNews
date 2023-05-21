@@ -41,7 +41,6 @@ if (isset($_POST["signup"])) {
         <h1 class="header">Leutrim Hajdini - CEO</h1>
         <p class="pstaf">Email: leutrimhajdini63@gmail.com</p>
         <button id="butoniPerMesazhLeo">Message</button>
-        <button id="butoni-thirrjeLeo">Call</button>
         <p class="numriLeo">Phone number: (+383)049-868-115</p>
     </div>
     
@@ -53,7 +52,6 @@ if (isset($_POST["signup"])) {
         <button id="butoniPerMesazhOlti">Message</button>
         
         <p class="numriLeo">Phone number: (+383)048-804-494</p>
-        <button id="butoni-thirrjeOlti">Call</button>
     </div>
   
     <div class="info">
@@ -63,7 +61,6 @@ if (isset($_POST["signup"])) {
         <button id="butoniPerMesazhIsma">Message</button>
         
         <p class="numriLeo">Phone Number: (+383)049-456-159</p>
-        <button id="butoni-thirrjeIsma">Call</button>
     </div>
    
     <div class="info">
@@ -74,7 +71,6 @@ if (isset($_POST["signup"])) {
         <button id="butoniPerMesazhZana">Message</button>
 
         <p class="numriLeo">Phone Number: (+383)045-884-123</p>
-        <button id="butoni-thirrjeZana">Call</button>
     </div>
     <div class="info">
     
@@ -84,7 +80,6 @@ if (isset($_POST["signup"])) {
         <button id="butoniPerMesazhGyltene">Message</button>
 
         <p class="numriLeo">Phone Number: (+383)045-544-123</p>
-        <button id="butoni-thirrjeGyltene">Call</button>
         <audio src="../audio/ringing.mp3" id="sound"></audio>
     </div>
     <!-- Footer -->

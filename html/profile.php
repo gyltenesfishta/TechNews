@@ -27,7 +27,7 @@
   }
     if (isset($_POST['delete_acc'])) {
         echo "<script>
-            if (confirm('Are you sure you want to delete your account? This action cannot be undone.')) {
+            if (confirm('A jeni i sigurtë që doni të fshini llogarinë? Ky veprim nuk mund të çbëhet.')) {
                 window.location.href = '../change-info/delete_user.php';
             } else {
                 window.location.href = '../html/profile.php';
@@ -100,7 +100,7 @@
                 <li class="list-group-item d-flex justify-content-between align-items-right ">
                 <form  method="post" action= "../change-info/delete_user.php">
                 <button type="submit" name = "delete_acc" class="btn btn-danger" style="margin-left:345px;white-space: nowrap;"
-                                 onclick="return confirm('Are you sure you want to delete your account? This action cannot be undone.')">Fshij llogarinë</button>
+                    onclick="return confirm('A jeni i sigurtë që doni të fshini llogarinë? Ky veprim nuk mund të çbëhet.')">Fshij llogarinë</button>
                 </form>
                 </li>
                 <li class="list-group-item d-flex justify-content-between align-items-right ">
@@ -135,7 +135,7 @@
             <hr>
             <div class="row">
               <div class="col-sm-3">
-                <p class="mb-0" style="margin-top: 20px;">Telefoni</p>
+                <p class="mb-0" style= "margin-top: 20px;">Telefoni</p>
               </div>
  
               <div class="col-sm-9">

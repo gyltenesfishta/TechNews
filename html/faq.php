@@ -78,7 +78,7 @@ if (isset($_POST["signup"])) {
     <div class="col-md-10 col-lg-7 mb-4 form-outline" style = "margin-left: -34%;">
     <form class = "border shadow p-3 rounded" style="background-color: #c5b078;"action="faq-logic.php"  method="post">
   <textarea class="form-control" name="pyetja" id="textAreaExample1" rows="4"></textarea>
-  <input type="submit" name="pyet" class="btn btn-success" style = "margin-top: 10px;"></input>
+  <input type="submit" name="pyet" value="Pyet" class="btn btn-success" style = "margin-top: 10px;"></input>
   <?php if (isset($_GET['error'])) { ?>
   <div class="alert alert-danger" role="alert" style="margin-top: 10px;">
     <?= $_GET['error'] ?>

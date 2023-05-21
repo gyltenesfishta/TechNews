@@ -135,7 +135,7 @@ $total_articles1 = $row2['total_earnings'];
         </div>
       </div>
       <?php if(isset($_SESSION["user_id"])){ 
-echo '<img class="rounded-circle" alt="avatar1" src="../images/male-pfp.png" style="width: 50px; margin-right: 20px; cursor: hand;margin-right: 20px;" onclick="window.location.href=\'../ceo/index.php\'">';
+echo '<img class="rounded-circle" alt="avatar1" src="../images/Leoo.jpg" style="width: 50px; margin-right: 20px; cursor: pointer;margin-right: 20px;" onclick="window.location.href=\'../ceo/index.php\'">';
       } else{
       } ?>
     </nav>

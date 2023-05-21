@@ -7,7 +7,7 @@
       <?php 
     if (!isset($_SESSION["user_id"])) {
     echo '<form method="post">
-              <button type="submit" name="login" class="btn btn-warning" onclick="window.location.href = \'login.php\';">Login</button>
+              <button type="submit" name="login" class="btn btn-warning" onclick="window.location.href = \'login.php\';">Log in</button>
           </form>';
           echo '<form method="post">
               <button type="submit" name="signup" class="btn btn-warning" style="margin-left: 10px;" onclick="window.location.href = \'signup.php\';">Sign up</button>
@@ -60,7 +60,7 @@
       <?php if(isset($_SESSION["user_id"]) && $_SESSION["user_id"] == 1 && isset($_SESSION['image'])){ 
         $image = $_SESSION['image'];
         echo '<p>Profili</p>';
-            echo '<img class="rounded-circle" alt="avatar1" src="data:image/jpeg;base64,'.base64_encode($image).'" style="width: 50px;cursor: pointer;" onclick="window.location.href=\'../ceo/index.php\'">';
+            echo '<img class="rounded-circle" alt="avatar1" src="../images/Leoo.jpg" style="width: 50px;cursor: pointer;" onclick="window.location.href=\'../ceo/index.php\'">';
         } else if(isset($_SESSION["user_id"])){
           $image = $_SESSION['image'];
             echo '<p style = "margin-top: 20px; color: white; font-size: 25px; font-family: Arial; padding: 5px;">Profili</p>';
