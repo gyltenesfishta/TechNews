@@ -20,9 +20,9 @@ session_start();
 <body style = "font-family:  Arial, Helvetica, sans-serif;">
 <form method="post" action="shto-lajmin-logic.php" enctype="multipart/form-data">
   <div class="form-group">
-    <label for="exampleInputEmail1" style = "padding-bottom: 10px; width: 50px; font-size: 30px; ">Titulli</label>
+    <label for="exampleInputEmail1" class="t1"  style = "padding-bottom: 10px; width: 50px; font-size: 30px;">Titulli</label>
     <input type="text" name="titulli" class="form-control" id="exampleInputEmail1" aria-describedby="titulli" required style= "border-style: inset #000000; background-color: #F0FFF0; ">
-    <label for="exampleFormControlTextarea1" style = "padding-bottom: 10px; width: 50px; font-size: 30px; padding-top: 20px;">Përmbajtja</label>
+    <label for="exampleFormControlTextarea1" class="t1" style = "padding-bottom: 10px; width: 50px; font-size: 30px; padding-top: 20px;">Përmbajtja</label>
     <textarea class="form-control" name="permbajtja" id="exampleFormControlTextarea1" rows="25" required style= "border-style: inset #000000; background-color:#F0FFF0;"></textarea>
     <input type="file" name="articleImage" class="form-control-file" id="exampleFormControlFile1" style="padding: 20px 0px 20px 0px;"><br>
     <input type="submit" name="shto-lajmin" class="btn" style="white-space: nowrap; color: white; background-color: green; height: 40px; font-weight: bold;" value="Shto lajmin">

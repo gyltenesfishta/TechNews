@@ -44,3 +44,9 @@ a:hover{
     margin-left: 300px;
     margin-top: 50px;
 }
+.t1{
+      color: #FFFFFF;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color:dimgray;  
+ 
+}
