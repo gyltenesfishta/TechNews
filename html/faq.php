@@ -74,7 +74,7 @@ if (isset($_POST["signup"])) {
         <strong>Sigurisht!</strong> Vetëm se duhet të cekësh instancën se për çfarë dhe ku do t'i përdorësh.
       </p>
     </div>
-    <label class="form-label" for="textAreaExample" style="margin-left: 8%"><strong>Dëshiron të dish më shumë rreth nesh?</strong></label>
+    <label class="form-label" for="textAreaExample" style="margin-left: 8%"><strong>Dëshironi të dini më shumë rreth nesh?</strong></label>
     <div class="col-md-10 col-lg-7 mb-4 form-outline" style = "margin-left: -34%;">
     <form class = "border shadow p-3 rounded" style="background-color: #c5b078;"action="faq-logic.php"  method="post">
   <textarea class="form-control" name="pyetja" id="textAreaExample1" rows="4"></textarea>
